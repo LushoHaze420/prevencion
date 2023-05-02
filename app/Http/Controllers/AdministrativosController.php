@@ -5,8 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Administrativos;
 
-class AdministrativosController extends Controller
-{
+class AdministrativosController extends Controller{
     public function index(){
         return view('capacitaciones');//pagina principal
     }

@@ -37,9 +37,12 @@ cursor: pointer;
 .card-header h3{
 color: white;
 margin-top: 10px;
+margin-bottom: 3px;
 }
-.card-header h5{
+
+.card-header h6{
 color: white;
+margin-bottom: 1px;
 }
 
 .social_icon{
@@ -58,7 +61,6 @@ border:0 !important;
 input:focus{
 outline: 0 0 0 0  !important;
 box-shadow: 0 0 0 0 !important;
-
 }
 
 .remember{
@@ -85,6 +87,7 @@ background-color: red;
 
 .links{
 color: white;
+margin-top: 1px;
 }
 
 .links a{
@@ -95,11 +98,6 @@ margin-left: 4px;
 color: red;
 }
 
-
 .otc a:hover{
 color: red;
 }
-
-
-
-

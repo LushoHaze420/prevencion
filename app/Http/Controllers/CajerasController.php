@@ -5,8 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Cajeras;
 
-class CajerasController extends Controller
-{
+class CajerasController extends Controller{
     public function index(){
         return view('capacitaciones');//pagina principal
     }
@@ -39,6 +38,4 @@ class CajerasController extends Controller
         $reg->save();
         return redirect()->route('listadoCajeras');
     }
-
-
-}
+};

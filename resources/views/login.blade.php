@@ -6,7 +6,7 @@
         <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <!------ Include the above in your HEAD tag ---------->
 
-        <title>Login Andimar/Casino</title>
+        <title>Login Andimar/Prevención</title>
         <!--Bootsrap 4 CDN-->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
@@ -22,8 +22,8 @@
             <div class="d-flex justify-content-center h-100">
                 <div class="card">
                     <div class="card-header">
-                        <h3>Inicia Sesión</h3>
-                        {{-- <h5>Prevención</h5> --}}
+                        <h3>Inicia Sesión</h5>
+                        <h6>Prevención</h6>
                         <div class="d-flex justify-content-end social_icon">
                         <a href="https://web.facebook.com/NuevaAndimarVIP?_rdc=1&_rdr">
                             <span><i class="fab fa-facebook-square"></i></span></a>
