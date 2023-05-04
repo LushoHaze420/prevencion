@@ -59,7 +59,7 @@
                     </div>
                     <div class="card-footer">
                         <div class="d-flex justify-content-center links">No tienes cuenta?
-                            <a href="#">  Regístrate</a> <!--redireccionar a vista de nuevo registro (no creada)-->
+                            <a href="#">  Regístrate</a> <!--pendiente, solo admin creara usuarios-->
                         </div>
                         <div class="d-flex justify-content-center otc">
                             <a href="#">Olvidaste tu contraseña?</a> <!--redireccionar a vista de olvidaste contrasena (no creada)-->

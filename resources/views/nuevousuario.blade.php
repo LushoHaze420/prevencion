@@ -17,27 +17,16 @@
 </head>
 
 <body class="p-3 m-1 border-1 bd-example">
-
     <div class="titulos">
-        <h2>Formulario de ingreso para capacitaciones</h2>
-        @yield('tituloArea')
+        <h2>Formulario de ingreso para nuevo usuario prevencionista</h2>
+        {{-- @yield('tituloArea') --}}
     </div>
-    <div class="center g-5 p-2 border-2 botonListadoCap">
-        @yield('botonListadoMantenimiento')
-        @yield('botonListadoCajeras')
-        @yield('botonListadoAseadores')
-        @yield('botonListadoGeryJef')
-        @yield('botonListadoCondyAux')
-        @yield('botonListadoAdministrativos')
+    <div class="center g-5 p-2 border-2 botonListadoNUPrev">
+        {{-- @yield('botonListadoNuevoUsuarioPrevencionista')  --}}
     </div>
-        @yield('storeCapM')
-        @yield('storeCapC')
-        @yield('storeCapA')
-        @yield('storeCapGJ')
-        @yield('storeCapCA')
-        @yield('storeCapAd')
+        @yield('storeNUPrev')
         @csrf
-        {{-- Rut prevencionista --}}
+        {{-- Rut nuevo prevencionista --}}
         <div class="row justify-content-center g-5 p-1 border-2">
             <div class="col-md-3">
                 <label for="rut_prev" class="form-label"><b>Rut prevencionista</b></label>

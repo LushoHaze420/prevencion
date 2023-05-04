@@ -19,18 +19,8 @@ use PhpParser\Node\Stmt\Return_;
 |
 */
 
-Route::get('login', function () {
-    return view('login');
-});
-
 Route::get('/', function () {
     return view('welcome');
-});
-
-
-/*BUSQUEDA POR RUT (PERFIL)*/
-Route::get('capacitaciones/perfil', function () {
-    return view('perfil');
 });
 
 // RUTAS DE PRUEBA
@@ -38,7 +28,26 @@ Route::get('prueba', function () {
     return view('prueba');
 });
 
+/*BUSQUEDA POR RUT (PERFIL)*/
+Route::get('capacitaciones/perfil', function () {
+    return view('perfil');
+});
 
+//VISTA ADMINISTRADOR
+Route::get('admin', function () {
+    return view('admin');
+});
+
+//VISTA ADMINISTRADOR, NUEVO USUARIO
+Route::get('admin/nuevousuario', function () {
+    return view('nuevousuario');
+});
+
+
+//LOGIN GENERAL
+Route::get('login', function () {
+    return view('login');
+});
 
 /*MANTENIMIENTO*/
 Route::controller(MantenimientoController::class)->group(function(){

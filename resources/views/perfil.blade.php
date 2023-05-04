@@ -12,10 +12,7 @@
 
 <body class="p-3 m-1 border-1 bd-example">
     <div class="container">
-
-
-
-
+{{-- INCOMPLETA --}}
         </table>
     </div>
 

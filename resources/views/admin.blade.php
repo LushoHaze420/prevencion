@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
         <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
-        <title>Home Capacitaciones</title>
+        <title>Home Admin</title>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     </head>
     <body class="p-3 m-0 border-0 bd-example">
@@ -27,7 +27,10 @@
                     <a class="nav-link active" aria-current="page" href="#">Home</a>
                     </li>
                     <li class="nav-item">
-                    <a class="nav-link" href="capacitaciones/mantenimiento">Mantenimiento</a>
+                        <a class="nav-link active" aria-current="page" href="admin/nuevousuario">Nuevo Usuario Prevencionista</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="capacitaciones/mantenimiento">Mantenimiento</a>
                     </li>
                     <li class="nav-item">
                     <a class="nav-link" href="capacitaciones/cajeras">Cajeras</a>
@@ -60,7 +63,7 @@
         </div>
     </nav>
     <div>
-        <h3><center>vista para prevencionista</center></h3> <!--texto informativo-->
+        <h3><center>vista para administrador</center></h3> <!--texto informativo-->
     </div>
     </body>
 </html>
