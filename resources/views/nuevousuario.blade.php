@@ -6,12 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
-    @yield('tituloPaginaM')
-    @yield('tituloPaginaC')
-    @yield('tituloPaginaA')
-    @yield('tituloPaginaGJ')
-    @yield('tituloPaginaCA')
-    @yield('tituloPaginaAD')
+    <title>Nuevo Prevencionista</title>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     @vite(['resources/css/app.css', 'resources/js/valRutPrev.js', 'resources/js/valRutPrev2.js', 'resources/js/valNomPrev.js', 'resources/js/valApPrev.js','resources/js/valRutCap.js','resources/js/valRutCap2.js', 'resources/js/valNomCap.js', 'resources/js/valApCap.js', 'resources/js/cargoCap.js','resources/js/valDocs.js',])
 </head>
@@ -19,12 +14,10 @@
 <body class="p-3 m-1 border-1 bd-example">
     <div class="titulos">
         <h2>Formulario de ingreso para nuevo usuario prevencionista</h2>
-        {{-- @yield('tituloArea') --}}
     </div>
     <div class="center g-5 p-2 border-2 botonListadoNUPrev">
-        {{-- @yield('botonListadoNuevoUsuarioPrevencionista')  --}}
-    </div>
-        @yield('storeNUPrev')
+        {{-- <p><a class="btn btn-primary" href="{{route('listadoNUPrev')}}">Ver listado de nuevos usuarios</a></p>    </div> --}}
+        <!--crear metodo y ruta-->
         @csrf
         {{-- Rut nuevo prevencionista --}}
         <div class="row justify-content-center g-5 p-1 border-2">
@@ -36,7 +29,7 @@
             </div>
         </div>
 
-        <!--nombre y apellidos prevencionista-->
+        <!--nombre y apellidos nuevo prevencionista-->
         <div class="row justify-content-center g-5 p-1 border-2">
             <div class="col-md-3">
                 <label for="" class="form-label"><b>Nombre prevencionista</b></label>
@@ -50,48 +43,26 @@
             </div>
         </div>
 
-        <!--rut del capacitado-->
+        <!--cargo del nuevo usuario-->
         <div class="row justify-content-center g-5 p-1 border-2">
-            <div class="col-md-3">
-                <label for="rut_cap" class="form-label"><b>Rut capacitado</b></label>
-                <input type="text" name="rut_cap" id="rut_cap" class="form-control" placeholder="Ingrese Rut del capacitado*" aria-label="Rut capacitado" maxlength="9">
-                <span id="maximo_caracteres_rc" class="form-text"></span>
+            <div class="col-md-3 "><label for="" class="form-label"><b>Rol Usuario</b></label>
+                <select class="form-select" aria-label="seleccion de rol">
+                    <option selected>Seleccione Rol</option>
+                    <option value="1" name="rol_usuario">Prevencionista</option>
+                </select>
+                {{-- <input type="text" name="rol_cap" id="soloLetras_cc" class="form-control" placeholder="Ingrese Cargo del capacitado*" aria-label="Cargo capacitado"> --}}
             </div>
         </div>
 
-        <!--nombre y apellidos capacitado-->
-        <div class="row justify-content-center g-5 p-1 border-2">
-            <div class="col-md-3">
-                <label for="" class="form-label"><b>Nombre capacitado</b></label>
-                <input type="text" name="nombre_cap" id="soloLetras_nc" class="form-control" placeholder="Ingrese nombre del capacitado"
-                    aria-label="Nombre capacitado">
-            </div>
-            <div class="col-md-3">
-                <label for="" class="form-label"><b>Apellidos capacitado</b></label>
-                <input type="text" name="apellidos_cap" id="soloLetras_ac" class="form-control" placeholder="Ingrese Apellidos del capacitado"
-                    aria-label="Apellidos capacitado">
-            </div>
-        </div>
-
-            <!--cargo del capacitado-->
-        <div class="row justify-content-center g-5 p-1 border-2">
-            <div class="col-md-3 "><label for="" class="form-label"><b>Rol capacitado</b></label>
-                <input type="text" name="rol_cap" id="soloLetras_cc" class="form-control" placeholder="Ingrese Cargo del capacitado*" aria-label="Cargo capacitado">
-            </div>
-        </div>
-
-        <!--multiple document upload-->
-        <div class="d-flex ">  {{--revisar la subida multiple de documentos--}}
-            <div class="col-md-3 mb-3 pl-1 border-2 subirDocs mx-auto">
-                <label for="formFileMultiple" class="form-label"><b>Documentos de la capacitación</b></label>
-                <input class="form-control" type="file" name="documentos" id="formFileMultiple" multiple>
+        <!--boton crear nuevo usuario prevencionista-->
+        <div class="d-flex align-items-center">
+            <div class="col-md-3 mb-3 pl-1 border-2 btnCrearUsuario mx-auto">
                 <br>
-                <button class="btn btn-success" type="submit">Subir Documentos</button>
             </div>
+            <button class="btn btn-success mx-auto" type="submit">Crear Usuario</button>
         </div>
     </form>
 </body>
-
 </html>
 
 
