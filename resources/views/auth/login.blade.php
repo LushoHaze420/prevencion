@@ -13,9 +13,12 @@
         <!--Fontawesome CDN-->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
+        <!--Bootsrap 5 CDN
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">-->
+
         <!--personalizado-->
         <link rel="stylesheet" type="text/css" href="{{asset('assets/login.css')}}">
-
+        @vite(['resources/js/login/valUsuario.js', 'resources/js/login/valUsuario2.js','resources/js/login/modalRegistrate.js'])
     </head>
     <body>
         <div class="container">
@@ -40,7 +43,8 @@
                                 <div class="input-group-prepend">
                                     <span class="input-group-text"><i class="fas fa-user"></i></span>
                                 </div>
-                                <input type="text" class="form-control" placeholder="Usuario" name="usuario"> <!--crear bd para guardar este registro-->
+                                <input type="text" class="form-control" placeholder="Usuario" name="usuario" id="usuario" maxlength="9"> <!--crear bd para guardar este registro-->
+                                <span id="maximo_caracteres_valUsuario" class="form-text"></span>
                             </div>
                             <div class="input-group form-group">
                                 <div class="input-group-prepend">
@@ -52,17 +56,18 @@
                                 <input type="checkbox">Recuerdame
                             </div>
                             <div class="form-group">
-                                <a class="btn float-right login_btn" value="Login" href="{{route('capacitaciones')}}">Login</a><!--boton de prueba, comparar credenciales ocupando otro metodo-->
+                                <a class="btn float-right login_btn" value="Login" href="{{route('adminCap')}}">Login</a><!--boton de prueba, comparar credenciales ocupando otro metodo-->
                                 <!--<input type="submit" value="Login" class="btn float-right login_btn" href="{route('capacitaciones')}}" >terminar este boton y agregar esto -->
                             </div>
                         </form>
                     </div>
+
                     <div class="card-footer">
                         <div class="d-flex justify-content-center links">No tienes cuenta?
-                            <a href="#">  Regístrate</a> <!--pendiente, solo admin creara usuarios-->
+                            <a class="" href="#" id="modalRegistrate">Regístrate</a>
                         </div>
                         <div class="d-flex justify-content-center otc">
-                            <a href="#">Olvidaste tu contraseña?</a> <!--redireccionar a vista de olvidaste contrasena (no creada)-->
+                            <a href="{{route('olviContrasena')}}">Olvidaste tu contraseña?</a>
                         </div>
                     </div>
                 </div>
@@ -70,4 +75,3 @@
         </div>
     </body>
 </html>
-

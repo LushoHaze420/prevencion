@@ -1,4 +1,3 @@
-//crear archivo js para este script
 const inputField = document.getElementById("rut_prev");
 const maximo_caracteres = document.getElementById("maximo_caracteres");
 
@@ -12,6 +11,3 @@ inputField.addEventListener("input", function() {  //maximo 9 caracteres
         maximo_caracteres.innerHTML = "";
     }
 });
-
-
-

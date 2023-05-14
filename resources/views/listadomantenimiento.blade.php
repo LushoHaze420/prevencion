@@ -12,7 +12,7 @@
 
 <body class="p-3 m-1 border-1 bd-example">
     <div class="container"> <!--Crear controlador para esta vista-->
-        <p><a class="btn btn-primary" href="{{route('capacitaciones')}}">Ingresar nueva capacitacion</a></p> {{--boton para volver a seleccionar capacitación--}}
+        <p><a class="btn btn-primary" href="{{route('adminCap')}}">Ingresar nueva capacitacion</a></p> {{--boton para volver a seleccionar capacitación--}}
         <table class="table">
             <thead>
                 <th>Id<br>Documentos</th>

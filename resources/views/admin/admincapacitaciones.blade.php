@@ -27,25 +27,25 @@
                     <a class="nav-link active" aria-current="page" href="#">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="admin/nuevousuario">Nuevo Usuario Prevencionista</a>
+                        <a class="nav-link active" aria-current="page" href="{{route('adminNuevoUsuario')}}">Nuevo Usuario</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="capacitaciones/mantenimiento">Mantenimiento</a>
+                        <a class="nav-link" href="{{route('formMantenimiento')}}">Mantenimiento</a>
                     </li>
                     <li class="nav-item">
-                    <a class="nav-link" href="capacitaciones/cajeras">Cajeras</a>
+                    <a class="nav-link" href="{{route('formCajeras')}}">Cajeras</a>
                     </li>
                     <li class="nav-item">
-                    <a class="nav-link" href="capacitaciones/aseadores">Aseadores</a>
+                    <a class="nav-link" href="{{route('formAseadores')}}">Aseadores</a>
                     </li>
                     <li class="nav-item">
-                    <a class="nav-link" href="capacitaciones/geryjef">Gerencia y Jefaturas</a>
+                    <a class="nav-link" href="{{route('formGeryJef')}}">Gerencia y Jefaturas</a>
                     </li>
                     <li class="nav-item">
-                    <a class="nav-link" href="capacitaciones/condyaux">Conductores y Auxiliares</a>
+                    <a class="nav-link" href="{{route('formCondyAux')}}">Conductores y Auxiliares</a>
                     </li>
                     <li class="nav-item">
-                    <a class="nav-link" href="capacitaciones/administrativos">Administrativos</a>
+                    <a class="nav-link" href="{{route('formAdministrativos')}}">Administrativos</a>
                     </li>
                 </ul>
             </div>
@@ -55,8 +55,8 @@
     <!--barra de busqueda por rut-->
     <nav class="navbar bg-body-tertiary">
         <div class="container-fluid">
-        <a class="navbar-brand">Ingrese Rut a consultar</a>
-        <form action="{{route('capacitaciones')}}" method="POST" class="d-flex" role="search"><!--agregar action y method al form-->
+        <a class="navbar-brand">Ingrese Rut a consultar</a>     <!--alinear a la izquierda-->
+        <form action="{{route('adminBusquedaRut')}}" method="GET" class="d-flex" role="search"><!--agregar action y method al form-->
             <input class="form-control me-2" type="search" placeholder="Rut del capacitado" aria-label="Search">
             <button class="btn btn-outline-success" type="submit">Buscar</button>
         </form>

@@ -53,7 +53,7 @@
     <nav class="navbar bg-body-tertiary">
         <div class="container-fluid">
         <a class="navbar-brand">Ingrese Rut a consultar</a>
-        <form action="{{route('capacitaciones')}}" method="POST" class="d-flex" role="search"><!--agregar action y method al form-->
+        <form action="#" method="GET" class="d-flex" role="search"><!--agregar action y method al form-->
             <input class="form-control me-2" type="search" placeholder="Rut del capacitado" aria-label="Search">
             <button class="btn btn-outline-success" type="submit">Buscar</button>
         </form>
