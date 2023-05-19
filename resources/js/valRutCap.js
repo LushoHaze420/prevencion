@@ -1,4 +1,4 @@
-//crear archivo js para este script
+//validacion para un maximo de 9 caracrteres para el campo rut
 const inputField_rc = document.getElementById("rut_cap");
 const maximo_carac_rc = document.getElementById("maximo_caracteres_rc");
 

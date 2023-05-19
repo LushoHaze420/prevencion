@@ -16,7 +16,7 @@ align-content: center;
 }
 
 .card{
-height: 500px; /*crear uno para registro*/
+height: 600px; /*crear uno para registro*/
 margin-top: auto;
 margin-bottom: auto;
 width: 400px;
@@ -109,6 +109,31 @@ width: 100px;
 }
 
 .creaNU_btn:hover{
+color: black;
+background-color: red;
+}
+
+.verNU_btn{
+color: white;
+background-color: blue;
+width: 140px;
+position: absolute;
+left: 50;
+
+}
+.verNU_btn:hover{
+color: black;
+background-color: red;
+}
+
+.volveracap_btn{
+color: white;
+background-color: blue;
+width: 140px;
+left: 50;
+}
+
+.volveracap_btn:hover{
 color: black;
 background-color: red;
 }

@@ -13,14 +13,14 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('users', function (Blueprint $table) {
+        Schema::create('nuevousuario', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            //$table->string('rut_NU')->unique(); agregar este campo para la busqueda por rut
-            $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
-            $table->rememberToken();
+            $table->string('rut_NU', 9)->unique();;
+            $table->string('nombre_NU', 30);
+            $table->string('apellido_NU', 30);
+            $table->string('email_NU', 40)->unique();;
+            $table->string('contrasena_NU', 30);
+            $table->string('rol_NU', 20);
             $table->timestamps();
         });
     }
@@ -32,6 +32,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('nuevousuario');
     }
 };

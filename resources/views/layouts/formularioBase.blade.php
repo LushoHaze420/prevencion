@@ -13,7 +13,7 @@
     @yield('tituloPaginaCA')
     @yield('tituloPaginaAD')
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    @vite(['resources/css/app.css', 'resources/js/valRutPrev.js', 'resources/js/valRutPrev2.js', 'resources/js/valNomPrev.js', 'resources/js/valApPrev.js','resources/js/valRutCap.js','resources/js/valRutCap2.js', 'resources/js/valNomCap.js', 'resources/js/valApCap.js', 'resources/js/cargoCap.js','resources/js/valDocs.js',])
+    @vite(['resources/css/app.css', 'assets/admincapacitaciones.css/', 'resources/js/valRutPrev.js', 'resources/js/valRutPrev2.js', 'resources/js/valNomPrev.js', 'resources/js/valApPrev.js','resources/js/valRutCap.js','resources/js/valRutCap2.js', 'resources/js/valNomCap.js', 'resources/js/valApCap.js', 'resources/js/cargoCap.js','resources/js/valDocs.js',])
 </head>
 
 <body class="p-3 m-1 border-1 bd-example">
@@ -23,7 +23,8 @@
         @yield('tituloArea')
     </div>
     <div class="center g-5 p-2 border-2 botonListadoCap">
-        @yield('botonListadoMantenimiento')
+        @yield('botonAdminListadoMantenimiento')
+        @yield('botonPrevListadoMantenimiento')     {{-- revisar --}}
         @yield('botonListadoCajeras')
         @yield('botonListadoAseadores')
         @yield('botonListadoGeryJef')

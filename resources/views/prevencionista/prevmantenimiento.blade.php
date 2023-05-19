@@ -1,4 +1,4 @@
-@extends('layouts.formularioBase')
+@extends('layouts.formularioBase')    <!--FORMULARIO DE MANTENIMIENTO EN VISTA PREVENCIONISTA-->
 
 @section('tituloPaginaM')
 <title>Mantenimiento</title>
@@ -8,8 +8,8 @@
 <h3><center>Mantenimiento</center></h3>
 @endsection
 
-@section('botonListadoMantenimiento')
-<p><a class="btn btn-primary" href="{{route('listadoMantenimiento')}}">Ver listado de capacitaciones</a></p>
+@section('botonPrevListadoMantenimiento')
+<p><a class="btn btn-primary" href="{{route('prevListadoMantenimiento')}}">Ver listado de capacitaciones</a></p>
 @endsection
 
 @section('storeCapM')

@@ -17,7 +17,7 @@ class MantenimientoController extends Controller{
     public function show(){
         $formmantenimiento = Mantenimiento::orderBy('id', 'desc')->get();
         //dd($formulariocap);
-        return view('listadomantenimiento', ['listadomantenimiento'=>$formmantenimiento]); //listado de capacitados
+        return view('listadomantenimiento', ['adminlistadomantenimiento'=>$formmantenimiento]); //listado de capacitados, esta lista hace uso todos los usuarios.
     }
 
     public function store(Request $request){
@@ -36,7 +36,7 @@ class MantenimientoController extends Controller{
         }
         //return $reg;
         $reg->save();
-        return redirect()->route('listadoMantenimiento');
+        return redirect()->route('listadomantenimiento');
     }
 };
 

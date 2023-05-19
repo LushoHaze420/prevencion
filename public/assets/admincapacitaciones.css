@@ -1,0 +1,14 @@
+.btnBusquedaRut{
+color: white;
+background-color: blue;
+width: 100px;
+}
+
+.btnBusquedaRut:hover{
+color: black;
+background-color: red;
+}
+
+.adminBusquedaRut{
+text-align: left; /*revisar */
+}

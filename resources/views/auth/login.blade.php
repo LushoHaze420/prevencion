@@ -37,15 +37,17 @@
                         </div>
                     </div>
                     <div class="card-body">
-                        <form> <!--<form action=route('login') method="post"></form> --> <!--crear bd para activar el action-->
-                            <!--@csrf-->
+                        <form action="" method="POST"></form> --> <!--crear bd para activar el action-->
+                            @csrf
                             <div class="input-group form-group">
                                 <div class="input-group-prepend">
                                     <span class="input-group-text"><i class="fas fa-user"></i></span>
                                 </div>
-                                <input type="text" class="form-control" placeholder="Usuario" name="usuario" id="usuario" maxlength="9"> <!--crear bd para guardar este registro-->
+                                <input type="text" class="form-control" placeholder="Usuario" name="usuario" id="usuario" maxlength="9" required> <!--crear bd para guardar este registro-->
+                                <div class="invalid-feedback">usuario no registrado</div> <!---revisar estilo de vaidacion-->
                                 <span id="maximo_caracteres_valUsuario" class="form-text"></span>
                             </div>
+                            {{-- <p class="border border-red-500 rounded-md">* error</p> --}}
                             <div class="input-group form-group">
                                 <div class="input-group-prepend">
                                     <span class="input-group-text"><i class="fas fa-key"></i></span>
@@ -56,7 +58,7 @@
                                 <input type="checkbox">Recuerdame
                             </div>
                             <div class="form-group">
-                                <a class="btn float-right login_btn" value="Login" href="{{route('adminCap')}}">Login</a><!--boton de prueba, comparar credenciales ocupando otro metodo-->
+                                <a class="btn float-right login_btn" type="submit" value="Login" href="{{route('adminCap')}}">Login</a><!--boton de prueba, comparar credenciales ocupando otro metodo-->
                                 <!--<input type="submit" value="Login" class="btn float-right login_btn" href="{route('capacitaciones')}}" >terminar este boton y agregar esto -->
                             </div>
                         </form>
