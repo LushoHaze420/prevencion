@@ -7,23 +7,23 @@ use App\Models\Administrativos;
 
 class AdministrativosController extends Controller{
     public function index(){
-        return view('capacitaciones');//pagina principal
+        return view('admin.admincapacitaciones');//pagina principal
     }
 
     public function create(){
-        return view('administrativos'); //formulario de ingreso
+        return view('admin.administrativos'); //formulario de ingreso
     }
 
     public function show(){
         $formadministrativos = Administrativos::orderBy('id', 'desc')->get();
-        return view('listadoadministrativos', ['listadoadministrativos'=>$formadministrativos]); //listado de capacitados
+        return view('admin.listadoadministrativos', ['listadoadministrativos'=>$formadministrativos]); //listado de capacitados
     }
 
     public function store(Request $request){
         $reg=new Administrativos();
-        $reg->rut_prev=$request->rut_prev;
+        //$reg->rut_prev=$request->rut_prev;
         $reg->nombre_prev=$request->nombre_prev;
-        $reg->apellidos_prev=$request->apellidos_prev;
+        //$reg->apellidos_prev=$request->apellidos_prev;
         $reg->rut_cap=$request->rut_cap;
         $reg->nombre_cap=$request->nombre_cap;
         $reg->apellidos_cap=$request->apellidos_cap;

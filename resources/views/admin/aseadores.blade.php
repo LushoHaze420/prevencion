@@ -8,8 +8,12 @@
 <h3><center>Aseadores</center></h3>
 @endsection
 
+@section('adminCap')
+<p><a class="btn btnAdminCap" href="{{route('adminCap')}}">Volver a capacitaciones</a></p>
+@endsection
+
 @section('botonListadoAseadores')
-<p><a class="btn btn-primary" href="{{route('listadoAseadores')}}">Ver listado de capacitaciones</a></p>
+<p><a class="btn btnListadoAseadores" href="{{route('listadoAseadores')}}">Ver listado de capacitaciones</a></p>
 @endsection
 
 @section('storeCapA')

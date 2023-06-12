@@ -8,8 +8,12 @@
 <h3><center>Conductores y Auxiliares</center></h3>
 @endsection
 
+@section('adminCap')
+<p><a class="btn btnAdminCap" href="{{route('adminCap')}}">Volver a Capacitaciones</a></p>
+@endsection
+
 @section('botonListadoCondyAux')
-<p><a class="btn btn-primary" href="{{route('listadoCondyAux')}}">Ver listado de capacitaciones</a></p>
+<p><a class="btn btnListadoCondyAux" href="{{route('listadoCondyAux')}}">Ver listado de capacitaciones</a></p>
 @endsection
 
 @section('storeCapCA')

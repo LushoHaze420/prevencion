@@ -1,0 +1,26 @@
+.btnBusquedaRut{
+color: white;
+background-color: blue;
+width: 100px;
+}
+
+.btnBusquedaRut:hover{
+color: black;
+background-color: red;
+}
+
+.adminBusquedaRut{
+text-align: left; /*revisar */
+}
+
+.bd-example{
+background-image: url('/img/busesandimar.jpg');
+background-repeat: no-repeat;
+background-size:cover;
+}
+
+.solomensaje{
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}

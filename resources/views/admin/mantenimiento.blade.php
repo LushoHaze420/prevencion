@@ -8,8 +8,12 @@
 <h3><center>Mantenimiento</center></h3>
 @endsection
 
-@section('botonAdminListadoMantenimiento')
-<p><a class="btn btn-primary" href="{{route('adminListadoMantenimiento')}}">Ver listado de capacitaciones</a></p>
+@section('adminCap')
+<p><a class="btn btnAdminCap" href="{{route('adminCap')}}">Volver a capacitaciones</a></p>
+@endsection
+
+@section('botonListadoMantenimiento')
+<p><a class="btn btnListadoMantenimiento" href="{{route('listadoMantenimiento')}}">Ver listado de capacitaciones</a></p>
 @endsection
 
 @section('storeCapM')

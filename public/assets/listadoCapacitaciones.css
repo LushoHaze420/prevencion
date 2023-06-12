@@ -1,0 +1,105 @@
+.listadoCapacitaciones{
+background-image: url('/img/fondo2.png');
+background-size: cover;
+background-repeat: no-repeat;
+height: 100%;
+font-weight: bold;
+}
+
+
+.prevListadoMantenimiento{
+background-image: url('/img/fondo2.png');
+background-size: cover;
+background-repeat: no-repeat;
+height: 100%;
+font-weight: bold;
+}
+
+
+.btnAdminCap{
+    color: white;
+    background-color: blue;
+}
+
+.btnAdminCap:hover{
+    color: black;
+    background-color: red;
+    font-weight: bold;
+}
+
+.btnFormAdministrativos{
+    color: white;
+    background-color: blue;
+}
+
+.btnFormAdministrativos:hover{
+    color: black;
+    background-color: red;
+    font-weight: bold;
+}
+
+.btnFormAseadores{
+    color: white;
+    background-color: blue;
+}
+
+.btnFormAseadores:hover{
+    color: black;
+    background-color: red;
+    font-weight: bold;
+}
+
+.btnFormCajeras{
+    color: white;
+    background-color: blue;
+}
+
+.btnFormCajeras:hover{
+    color: black;
+    background-color: red;
+    font-weight: bold;
+}
+
+.btnFormCondyAux{
+    color: white;
+    background-color: blue;
+}
+
+.btnFormCondyAux:hover{
+    color: black;
+    background-color: red;
+    font-weight: bold;
+}
+
+.btnFormGeryJef{
+    color: white;
+    background-color: blue;
+}
+
+.btnFormGeryJef:hover{
+    color: black;
+    background-color: red;
+    font-weight: bold;
+}
+
+.btnFormMantenimiento{
+    color: white;
+    background-color: blue;
+}
+
+.btnFormMantenimiento:hover{
+    color: black;
+    background-color: red;
+    font-weight: bold;
+}
+
+.btnFormNuevoUsuario{
+    color: white;
+    background-color: blue;
+}
+
+.btnFormNuevoUsuario:hover{
+    color: black;
+    background-color: red;
+    font-weight: bold;
+}

@@ -1,0 +1,107 @@
+.card{
+    height: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 1000px;
+    background-color: rgb(255, 251, 251) !important;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.titulos{
+    text-align: center;
+}
+
+.botonListadoCap{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.formularioBase {
+    background-image: url('/img/fondo1.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    font-weight: bold;
+}
+
+
+
+
+.btnAdminCap{
+    color: white;
+    background-color: blue;
+}
+
+.btnAdminCap:hover{
+    color: black;
+    background-color: red;
+    font-weight: bold;
+}
+
+.btnListadoAdministrativos{
+    color: white;
+    background-color: blue;
+}
+
+.btnListadoAdministrativos:hover{
+    color: black;
+    background-color: red;
+    font-weight: bold;
+}
+
+.btnListadoAseadores{
+    color: white;
+    background-color: blue;
+}
+
+.btnListadoAseadores:hover{
+    color: black;
+    background-color: red;
+    font-weight: bold;
+}
+
+.btnListadoCajeras{
+    color: white;
+    background-color: blue;
+}
+
+.btnListadoCajeras:hover{
+    color: black;
+    background-color: red;
+    font-weight: bold;
+}
+
+.btnListadoCondyAux{
+    color: white;
+    background-color: blue;
+}
+
+.btnListadoCondyAux:hover{
+    color: black;
+    background-color: red;
+    font-weight: bold;
+}
+
+.btnListadoGeryJef{
+    color: white;
+    background-color: blue;
+}
+
+.btnListadoGeryJef:hover{
+    color: black;
+    background-color: red;
+    font-weight: bold;
+}
+
+.btnListadoMantenimiento{
+    color: white;
+    background-color: blue;
+}
+
+.btnListadoMantenimiento:hover{
+    color: black;
+    background-color: red;
+    font-weight: bold;
+}

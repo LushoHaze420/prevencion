@@ -69,7 +69,7 @@ return [
     |
     */
 
-    'timezone' => 'UTC',
+    'timezone' => 'America/Santiago', //modidficado para mostrar fecha de creacion en listado
 
     /*
     |--------------------------------------------------------------------------

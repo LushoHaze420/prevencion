@@ -7,24 +7,24 @@ use App\Models\Mantenimiento;
 
 class MantenimientoController extends Controller{
     public function index(){
-        return view('capacitaciones');//pagina principal
+        return view('admin.admincapacitaciones');//pagina principal
     }
 
     public function create(){
-        return view('mantenimiento'); //formulario de ingreso
+        return view('admin.mantenimiento'); //formulario de ingreso general, se debe heradar esta vista para cada usuario.
     }
 
     public function show(){
         $formmantenimiento = Mantenimiento::orderBy('id', 'desc')->get();
         //dd($formulariocap);
-        return view('listadomantenimiento', ['adminlistadomantenimiento'=>$formmantenimiento]); //listado de capacitados, esta lista hace uso todos los usuarios.
-    }
+        return view('admin.listadomantenimiento', ['listadomantenimiento'=>$formmantenimiento]); //listado de capacitados, esta lista hace uso todos los usuarios.
+    }   //este código carga la vista 'listadomantenimiento' y pasa el valor de $formmantenimiento a través de la variable $listadomantenimiento (revisar cual variable hereda) para ser utilizado en la vista.
 
     public function store(Request $request){
         $reg=new Mantenimiento();
-        $reg->rut_prev=$request->rut_prev;
+        // $reg->rut_prev=$request->rut_prev;
         $reg->nombre_prev=$request->nombre_prev;
-        $reg->apellidos_prev=$request->apellidos_prev;
+        // $reg->apellidos_prev=$request->apellidos_prev;
         $reg->rut_cap=$request->rut_cap;
         $reg->nombre_cap=$request->nombre_cap;
         $reg->apellidos_cap=$request->apellidos_cap;
@@ -36,7 +36,7 @@ class MantenimientoController extends Controller{
         }
         //return $reg;
         $reg->save();
-        return redirect()->route('listadomantenimiento');
+        return redirect()->route('listadoMantenimiento'); //name de la ruta
     }
 };
 

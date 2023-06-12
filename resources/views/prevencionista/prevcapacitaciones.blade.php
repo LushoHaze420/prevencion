@@ -7,6 +7,8 @@
         <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
         <title>Home Capacitaciones</title>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="{{asset('assets/capacitaciones.css')}}">
+        @vite([ 'resources/js/prev/valPrevBusquedaRut2.js'])
     </head>
     <body class="p-3 m-0 border-0 bd-example">
         <!--barra de navegacion con toggler-->
@@ -47,15 +49,16 @@
                 </ul>
             </div>
         </div>
-    </div>
+        </div>
     </nav>
     <!--barra de busqueda por rut-->
     <nav class="navbar bg-body-tertiary">
         <div class="container-fluid">
-        <a class="navbar-brand">Ingrese Rut a consultar</a>
+        <a class="navbar-brand prevBusquedaRut">Ingrese Rut a consultar</a>
         <form action="{{route('prevBusquedaRut')}}" method="GET" class="d-flex" role="search"><!--agregar action y method al form-->
-            <input class="form-control me-2" type="search" placeholder="Rut del capacitado" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Buscar</button>
+            <input class="form-control me-2" type="search" id="prev_busqueda_rut" placeholder="Rut del capacitado" aria-label="Search" maxlength="9">
+            <span id="maximo_caracteres_abr" class="form-text"></span>
+            <button class="btn btn-outline-success btnBusquedaRut" type="submit">Buscar</button>
         </form>
         </div>
     </nav>

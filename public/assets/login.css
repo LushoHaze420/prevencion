@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css?family=Numans');
 
 html,body{
-background-image: url('https://www.andimar.cl/images/buses.jpg');
+background-image: url('/img/busesandimar.jpg');
 background-size: cover;
 background-repeat: no-repeat;
 height: 100%;
@@ -16,7 +16,7 @@ align-content: center;
 }
 
 .card{
-height: 400px;
+height: 380px;
 margin-top: auto;
 margin-bottom: auto;
 width: 400px;

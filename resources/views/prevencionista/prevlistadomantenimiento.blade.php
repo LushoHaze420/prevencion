@@ -1,4 +1,4 @@
-<!doctype html>
+{{-- <!doctype html>
 <html lang="en">
 
 <head>
@@ -8,12 +8,13 @@
     <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
     <title>Listado de documentos mantenimiento</title>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="{{asset('assets/listadomantenimiento.css')}}">
 </head>
 
-<body class="p-3 m-1 border-1 bd-example">
+<body class="p-3 m-1 border-1 prevlistadoMantenimiento">
     <div class="container"> <!--Crear controlador para esta vista-->
         <p><a class="btn btn-primary" href="{{route('prevCap')}}">Ingresar nueva capacitacion</a></p> {{--boton para volver a seleccionar capacitación--}}
-        <table class="table">
+        {{--<table class="table">
             <thead>
                 <th>Id<br>Documentos</th>
                 <th>Rut<br>Prevencionista</th>
@@ -49,4 +50,4 @@
     </div>
 
 </body>
-</html>
+</html> --}}

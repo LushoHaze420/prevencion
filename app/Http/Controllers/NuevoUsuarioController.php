@@ -9,13 +9,13 @@ use Illuminate\Validation\Rule;
 
 class NuevoUsuarioController extends Controller{
     public function create(){
-        return view ('admin.adminnuevousuario');
+        return view ('admin.nuevousuario');
     }
 
     public function show(){
         $formnuevousuario = NuevoUsuario::orderBy('id', 'desc')->get();
         //dd($formulariocap);
-        return view('admin.adminusuarioscreados', ['adminusuarioscreados'=>$formnuevousuario]); //listado de nuevos usuarios
+        return view('admin.listadousuarios', ['listadousuarios'=>$formnuevousuario]); //listado de nuevos usuarios
     }
 //------------------------------------------------------------------------
     public function store(Request $request){
@@ -29,13 +29,9 @@ class NuevoUsuarioController extends Controller{
             return back()->with('error', 'El registro ya existe.');
         }
 
-            // El registro no existe, puedes asignar el valor a la variable y continuar con el proceso de almacenamiento
+        // El registro no existe, puedes asignar el valor a la variable y continuar con el proceso de almacenamiento
         $regNU = new NuevoUsuario();
         $regNU->rut_NU = $rutNU;
-
-
-
-
         $regNU->nombre_NU=$request->nombre_NU;
         $regNU->apellido_NU=$request->apellido_NU;
         $regNU->email_NU=$request->email_NU;
@@ -43,7 +39,7 @@ class NuevoUsuarioController extends Controller{
         $regNU->rol_NU=$request->rol_NU;
         //return $reg;
         $regNU->save();
-        return redirect()->route('adminUsuariosCreados'); //este es el name de la ruta
+        return redirect()->route('listadoUsuarios'); //este es el name de la ruta
 
     }
 }

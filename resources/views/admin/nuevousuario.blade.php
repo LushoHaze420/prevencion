@@ -18,7 +18,13 @@
 
         <!--personalizado-->
         <link rel="stylesheet" type="text/css" href="{{asset('assets/nuevoUsuario.css')}}">
-        @vite(['resources/js/nuevoUsuario/valRutNU.js','resources/js/nuevoUsuario/valRutNU2.js','resources/js/nuevoUsuario/valNomNU.js','resources/js/nuevoUsuario/valApNU.js', 'resources/js/nuevoUsuario/valBtnCreaNU.js'])
+        @vite(['resources/js/nuevoUsuario/valRutNU.js',
+        'resources/js/nuevoUsuario/valRutNU2.js',
+        'resources/js/nuevoUsuario/valNomNU.js',
+        'resources/js/nuevoUsuario/valApNU.js',
+        'resources/js/nuevoUsuario/valBtnCreaNU.js',
+        'resources/js/nuevoUsuario/valContra.js',
+        'resources/js/nuevoUsuario/valContra2',])
     </head>
     <body>
         <div class="container">
@@ -27,17 +33,17 @@
                     <div class="card-header">
                         <h3>Registro</h5>
                         <h6>Nuevo Usuario</h6>
-                        <div class="d-flex justify-content-end social_icon">
+                        {{-- <div class="d-flex justify-content-end social_icon">
                         <a href="https://web.facebook.com/NuevaAndimarVIP?_rdc=1&_rdr">
                             <span><i class="fab fa-facebook-square"></i></span></a>
                         <a href="https://www.instagram.com/andimarvip/">
                             <span><i class="fab fa-instagram"></i></span></a>
                         <a href="https://www.linkedin.com/company/nueva-andimar-vip/">
                             <span><i class="fab fa-linkedin"></i></span></a>
-                        </div>
+                        </div> --}}
                     </div>
                     <div class="card-body">
-                        <form action="{{route('storeAdminNuevoUsuario')}}" method="POST" enctype="multipart/form-data"> <!--crear bd para activar el action-->
+                        <form action="{{route('storeNuevoUsuario')}}" method="POST" enctype="multipart/form-data"> <!--crear bd para activar el action-->
                             @csrf
                             <div class="input-group form-group"> <!--Rut nuevo usuario -->
                                 <div class="input-group-prepend">
@@ -86,12 +92,14 @@
                                 </div>
                                 <input type="email" class="form-control" placeholder="Email" name="email_NU" id="emailNU"> <!--crear bd para guardar este registro-->
                             </div>
+
                             <div class="input-group form-group"><!--contraseña nuevo usuario -->
                                 <div class="input-group-prepend">
-                                    <span class="input-group-text"><i class="fas fa-key"></i></span>
+                                    <span id="maximo_caracteres_contraNU" class="input-group-text"><i class="fas fa-key"></i></span>
                                 </div>
-                                <input type="password" class="form-control" placeholder="Contraseña" name="contrasena_NU" id="contraNU"> <!--crear bd para guardar este registro-->
+                                <input type="password" class="form-control" placeholder="Contraseña" name="contrasena_NU" id="contraNU" maxlength="9"> <!--crear bd para guardar este registro-->
                             </div>
+
                             <div class="input-group form-group"><!--repetir contraseña nuevo usuario -->
                                 <div class="input-group-prepend">
                                     <span class="input-group-text"><i class="fas fa-key"></i></span>
@@ -105,7 +113,7 @@
                                 </div>
                                 <select class="form-select " name="rol_NU" aria-label="seleccion de rol">
                                     <option selected>Seleccione Rol</option>
-                                    {{-- <option value="Admin" name="rol_usuario_admin">Administrador</option> REVISAR CON ALFRED--}}
+                                    <option value="Admin" name="rol_usuario_admin">Administrador</option> <!--solo el superadmin puede crear administradores-->
                                     <option value="Prev" name="rol_usuario_prevencionista">Prevencionista</option>
                                     <option value="Cons" name="rol_usuario_consultor">Consultor</option>
                                 </select>
@@ -116,7 +124,7 @@
                                 <!--<input type="submit" value="Login" class="btn float-right login_btn" href="{route('capacitaciones')}}" >terminar este boton y agregar esto -->
                             </div>
                         </form>
-                    <p><a class="btn float-right verNU_btn" href="{{route('adminUsuariosCreados')}}">Ver usuarios</a></p>
+                    <p><a class="btn float-right verNU_btn" href="{{route('listadoUsuarios')}}">Ver usuarios</a></p>
                     <br>
                     <br>
                     <p><a class="btn float-left volveracap_btn" href="{{route('adminCap')}}">Volver a Cap</a></p>

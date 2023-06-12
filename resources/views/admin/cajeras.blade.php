@@ -8,8 +8,12 @@
 <h3><center>Cajeras</center></h3>
 @endsection
 
+@section('adminCap')
+<p><a class="btn btnAdminCap" href="{{route('adminCap')}}">Volver a capacitaciones</a></p>
+@endsection
+
 @section('botonListadoCajeras')
-<p><a class="btn btn-primary" href="{{route('listadoCajeras')}}">Ver listado de capacitaciones</a></p>
+<p><a class="btn btnListadoCajeras" href="{{route('listadoCajeras')}}">Ver listado de capacitaciones</a></p>
 @endsection
 
 @section('storeCapC')
