@@ -38,6 +38,10 @@ class MantenimientoController extends Controller{
         $reg->save();
         return redirect()->route('listadoMantenimiento'); //name de la ruta
     }
+
+    public function perfilcapacitado(){
+        return view('admin.perfilcapacitadoma');
+    }
 };
 
 

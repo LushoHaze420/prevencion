@@ -39,4 +39,8 @@ class AseadoresController extends Controller
         $reg->save();
         return redirect()->route('listadoAseadores');
     }
+
+    public function perfilcapacitado(){
+        return view('admin.perfilcapacitadoas');
+    }
 }

@@ -38,4 +38,8 @@ class CajerasController extends Controller{
         $reg->save();
         return redirect()->route('listadoCajeras');
     }
+
+    public function perfilcapacitado(){
+        return view('admin.perfilcapacitadoca');
+    }
 };

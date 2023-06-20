@@ -34,7 +34,8 @@
                         <th>Rol<br>Capacitado</th>
                         <th>Fecha<br>Creación</th>
                         <th>Fecha<br>Modificación</th>
-                        <th>Ver</th>
+                        <th>Capacitaciones</th>
+                        <th>Perfil</th>
                     </thead>
 
                     <tbody>
@@ -50,7 +51,9 @@
                                 <td>{{ $la->rol_cap }}</td>
                                 <td>{{ $la->created_at->format('d-m-Y H:i') }}</td>
                                 <td>{{ $la->updated_at->format('d-m-Y H:i') }}</td>
-                                <td> <a class="btn btn-danger" href="/Archivos/aseadores/{{ $la->documentos }}" target="blank_">Ver Documentos</a> </td>
+                                <td> <a class="btn btn-danger" href="/Archivos/aseadores/{{ $la->documentos }}" target="blank_">Documentos</a> </td>
+                                <td> <a class="btn btn-danger" href="{{route('perfilCapacitadoAs')}}" >Modificar</a> </td>
+
                             </tr>
                         @empty
                             <tr>

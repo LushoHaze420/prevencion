@@ -38,4 +38,8 @@ class GeryJefController extends Controller
         $reg->save();
         return redirect()->route('listadoGeryJef');
     }
+
+    public function perfilcapacitado(){
+        return view('admin.perfilcapacitadogyj');
+    }
 }

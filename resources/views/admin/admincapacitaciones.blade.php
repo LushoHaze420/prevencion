@@ -29,7 +29,7 @@
                             <a class="nav-link active" aria-current="page" href="#">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="{{route('formNuevoUsuario')}}">Nuevo Usuario</a>
+                                <a class="nav-link active" aria-current="page" href="{{route('formNuevoUsuario')}}">Usuarios</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="{{route('formAdministrativos')}}">Administrativos</a>
@@ -57,9 +57,10 @@
     <!--barra de busqueda por rut-->
     <nav class="navbar bg-body-tertiary">
         <div class="container-fluid">
-        <a class="navbar-brand adminBusquedaRut">Ingrese Rut a Consultar</a>     <!--LINEAR A LA IZQUIERDA admincapacitaciones.css-->
-        <form action="{{route('busquedaRut')}}" method="GET" class="d-flex" role="search"><!--agregar action y method al form-->
-            <input class="form-control me-2" type="search" name="adminbusquedarut" id="admin_busqueda_rut" placeholder="Rut del capacitado" aria-label="Search" maxlength="9">
+        <a class="navbar-brand busquedaRut">Ingrese Rut a Consultar</a>     <!--ALINEAR A LA IZQUIERDA admincapacitaciones.css-->
+        <form action="{{ route('busquedaRut') }}" method="GET" class="d-flex" role="search">
+            @csrf
+            <input class="form-control me-2" type="search" name="busquedarut" id="busqueda_rut" placeholder="Rut del capacitado" aria-label="Search" maxlength="9">
             <span id="maximo_caracteres_abr" class="form-text"></span>
             <button class="btn btn-outline-success btnBusquedaRut" type="submit">Buscar</button>
         </form>
@@ -68,7 +69,6 @@
     <div>
         <div class="card solomensaje">
             <h3><center>Vista para S. Administrador</center></h3> <!--texto informativo-->
-
         </div>
     </div>
     </body>

@@ -21,7 +21,10 @@
 
         <!--personalizado-->
         <link rel="stylesheet" type="text/css" href="{{asset('assets/login.css')}}">
-        @vite(['resources/js/login/valContrasena.js', 'resources/js/login/valContrasena2.js',])
+        @vite(['resources/js/login/valContrasena.js',
+        'resources/js/login/valContrasena2.js',
+        'resources/js/login/valUsuario.js',
+        'resources/js/login/recuerdame.js',])
     </head>
     <body>
         <div class="container">
@@ -40,7 +43,7 @@
                         </div>
                     </div>
                     <div class="card-body">
-                        <form action="" method="POST"></form> --> <!--crear bd para activar el action-->
+                        <form action="" method="POST"></form> <!--crear bd para activar el action-->
                             @csrf
                             <div class="input-group form-group">
                                 <div class="input-group-prepend">
@@ -59,7 +62,7 @@
                             </div>
 
                             <div class="row align-items-center remember">
-                                <input type="checkbox">Recuerdame
+                                <input type="checkbox" id="recuerdame">Recuerdame
                             </div>
 
                             <div class="form-group">

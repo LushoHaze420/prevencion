@@ -38,4 +38,9 @@ class CondyAuxController extends Controller
         $reg->save();
         return redirect()->route('listadoCondyAux');
     }
+
+
+    public function perfilcapacitado(){
+        return view('admin.perfilcapacitadocya');
+    }
 }

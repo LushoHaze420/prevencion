@@ -1,4 +1,4 @@
-//validacion para rut de login con maximo nueve caracteres.
+//validacion para contraseña de login con maximo nueve caracteres.
 const inputField_valContrasena = document.getElementById("contrasena");
 const maximo_caracteres_valContrasena = document.getElementById("maximo_caracteres_valContrasena");
 

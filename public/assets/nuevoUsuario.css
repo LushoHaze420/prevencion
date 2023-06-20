@@ -126,14 +126,14 @@ color: black;
 background-color: red;
 }
 
-.volveracap_btn{
+.adminCapBtn{
 color: white;
 background-color: blue;
 width: 140px;
 left: 50;
 }
 
-.volveracap_btn:hover{
+.adminCapBtn:hover{
 color: black;
 background-color: red;
 }

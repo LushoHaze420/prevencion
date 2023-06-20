@@ -1,0 +1,45 @@
+/* perfil usuarios */
+
+.perfil{
+    background-image: url('/img/fondo2.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    /*font-weight: bold;*/
+    }
+
+
+.btn_AdminCap{
+    color: white;
+    background-color: blue;
+}
+
+.btn_AdminCap:hover{
+    color: black;
+    background-color: red;
+    font-weight: bold;
+}
+
+.btn_FormNuevoUsuario{
+    color: white;
+    background-color: blue;
+}
+
+.btn_FormNuevoUsuario:hover{
+    color: black;
+    background-color: red;
+    font-weight: bold;
+}
+
+.btn_VerNU{
+    color: white;
+    background-color: blue;
+}
+
+.btn_VerNU:hover{
+    color: black;
+    background-color: red;
+    font-weight: bold;
+}
+
+

@@ -24,7 +24,11 @@
         'resources/js/nuevoUsuario/valApNU.js',
         'resources/js/nuevoUsuario/valBtnCreaNU.js',
         'resources/js/nuevoUsuario/valContra.js',
-        'resources/js/nuevoUsuario/valContra2',])
+        'resources/js/nuevoUsuario/valContra2',
+        'resources/js/nuevoUsuario/valRepContra.js',
+        'resources/js/nuevoUsuario/valRepContra2.js',
+        'resources/js/nuevoUsuario/valRepContra3.js',
+        'resources/js/nuevoUsuario/valEmailNU.js',])
     </head>
     <body>
         <div class="container">
@@ -93,19 +97,23 @@
                                 <input type="email" class="form-control" placeholder="Email" name="email_NU" id="emailNU"> <!--crear bd para guardar este registro-->
                             </div>
 
-                            <div class="input-group form-group"><!--contraseña nuevo usuario -->
+                            <div class="input-group form-group">
+                                <!-- Contraseña nuevo usuario -->
                                 <div class="input-group-prepend">
                                     <span id="maximo_caracteres_contraNU" class="input-group-text"><i class="fas fa-key"></i></span>
                                 </div>
-                                <input type="password" class="form-control" placeholder="Contraseña" name="contrasena_NU" id="contraNU" maxlength="9"> <!--crear bd para guardar este registro-->
+                                <input type="password" class="form-control" placeholder="Contraseña" name="contrasena_NU" id="contraNU" maxlength="9">
+                                <span id="contraAlert" style="color: red;"></span> <!-- Elemento para mostrar la alerta -->
                             </div>
 
-                            <div class="input-group form-group"><!--repetir contraseña nuevo usuario -->
+                            <div class="input-group form-group">
+                                <!-- Repetir contraseña nuevo usuario -->
                                 <div class="input-group-prepend">
                                     <span class="input-group-text"><i class="fas fa-key"></i></span>
                                 </div>
-                                <input type="password" class="form-control" placeholder="Repetir Contraseña" name="repetirContrasena_NU" id="repContraNU"> <!--crear bd para guardar este registro-->
+                                <input type="password" class="form-control" placeholder="Repetir Contraseña" name="repetirContrasena_NU" id="repContraNU" maxlength="9">
                             </div>
+                            <div id="repContraAlertContainer"></div> <!-- Contenedor para mostrar la alerta -->
 
                             <div class="input-group form-group"><!--seleccion rol nuevo usuario -->
                                 <div class="input-group-prepend">
@@ -127,7 +135,7 @@
                     <p><a class="btn float-right verNU_btn" href="{{route('listadoUsuarios')}}">Ver usuarios</a></p>
                     <br>
                     <br>
-                    <p><a class="btn float-left volveracap_btn" href="{{route('adminCap')}}">Volver a Cap</a></p>
+                    <p><a class="btn float-left adminCapBtn" href="{{route('adminCap')}}">Volver a Cap</a></p>
                     </div>
                 </div>
             </div>

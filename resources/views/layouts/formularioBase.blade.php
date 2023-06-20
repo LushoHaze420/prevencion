@@ -7,6 +7,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{{asset('assets/formularioBase.css')}}">
+    {{-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> --}}
+
     @yield('tituloPaginaM')
     @yield('tituloPaginaC')
     @yield('tituloPaginaA')
@@ -108,18 +110,24 @@
                     </div>
                 </div>
 
+
+
+
                 <!--multiple document upload-->
                 <div class="d-flex justify-content-auto">  {{--revisar la subida multiple de documentos--}}
                     <div class="col-md-3 mb-3 pl-1 border-2 subirDocs mx-auto">
                         <label for="formFileMultiple" class="form-label"><b>Documentos de la capacitación</b></label>
                         <input class="form-control" type="file" name="documentos" id="formFileMultiple" multiple>
                         <br>
-                        <button class="btn btn-success" type="submit">Subir Documentos</button>
+                        {{-- <button class="btn btn-success" type="submit">Subir Documentos</button> --}}
+                        <button class="btn btn-success" type="submit" data-toggle="modal" data-target="#modalError">Subir Documentos</button>
                     </div>
                 </div>
             </div>
         </div>
     </form>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 </html>
 

@@ -37,4 +37,8 @@ class AdministrativosController extends Controller{
         $reg->save();
         return redirect()->route('listadoAdministrativos');
     }
+
+    public function perfilcapacitado(){
+        return view('admin.perfilcapacitadoad');
+    }
 }

@@ -29,7 +29,7 @@ class NuevoUsuarioController extends Controller{
             return back()->with('error', 'El registro ya existe.');
         }
 
-        // El registro no existe, puedes asignar el valor a la variable y continuar con el proceso de almacenamiento
+        // si el registro no existe, puedes asignar el valor a la variable y continuar con el proceso de almacenamiento
         $regNU = new NuevoUsuario();
         $regNU->rut_NU = $rutNU;
         $regNU->nombre_NU=$request->nombre_NU;
@@ -42,4 +42,17 @@ class NuevoUsuarioController extends Controller{
         return redirect()->route('listadoUsuarios'); //este es el name de la ruta
 
     }
+
+
+    // public function edit($id){
+
+    //     $usuario = NuevoUsuario::find($id);
+    //     return view('admin.perfilcapacitado', compact('usuario')); para modificacion del perfil del usuario, no terminado
+    // }
+
+    public function perfilusuario(){
+        return view('admin.perfilusuario');
+    }
+
+
 }

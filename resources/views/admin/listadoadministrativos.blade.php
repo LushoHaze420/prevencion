@@ -34,7 +34,8 @@
                         <th>Rol<br>Capacitado</th>
                         <th>Fecha<br>Creación</th>
                         <th>Fecha<br>Modificación</th>
-                        <th>Ver</th>
+                        <th>Capacitaciones</th>
+                        <th>Perfil</th>
                     </thead>
 
                     <tbody>
@@ -50,8 +51,9 @@
                                 <td>{{ $lad->rol_cap }}</td>
                                 <td>{{ $lad->created_at->format('d-m-Y H:i') }}</td>
                                 <td>{{ $lad->updated_at->format('d-m-Y H:i') }}</td>
-                                <td> <a class="btn btn-danger" href="/Archivos/administrativos/{{ $lad->documentos }}" target="blank_">Ver Documentos</a> </td>
-                            </tr> {{-- EN ESTA VISTA, AGREGAR UN BOTON A LA TABLA PARA MODIFICAR LA CAPACITACION INGRESADA MEDIANTE CONTROLADOR --}}
+                                <td> <a class="btn btn-danger" href="/Archivos/administrativos/{{ $lad->documentos }}" target="blank_">Documentos</a> </td>
+                                <td><a class="btn btn-danger" href="{{route('perfilCapacitadoAd')}}">Modificar</a> </td>
+                            </tr>
                         @empty
                             <tr>
                                 <th>Sin registros</th>
