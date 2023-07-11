@@ -24,3 +24,9 @@ background-size:cover;
     margin-left: auto;
     margin-right: auto;
 }
+
+.navbar-smaller {
+    max-width: 580px; /* Ajusta el valor según tus necesidades */
+    justify-content: flex-end;
+    margin-left: auto;
+}

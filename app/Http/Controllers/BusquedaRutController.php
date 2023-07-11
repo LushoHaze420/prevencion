@@ -72,6 +72,16 @@ class BusquedaRutController extends Controller
         ]);
     }
 
+    public function perfil()
+    {
+        return view('admin.busquedarut');
+    }
+
+
+
+
+
+
     /**
      * Show the form for editing the specified resource.
      *
@@ -105,9 +115,5 @@ class BusquedaRutController extends Controller
     {
         //
     }
-
-
-
-
 
 }

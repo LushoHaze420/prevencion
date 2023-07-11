@@ -2,6 +2,8 @@
 <html lang="en">
 
 <head>
+    <link rel="icon" href="{{ asset('icons/logoAndimar.png') }}" type="image/x-icon">
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -109,20 +111,52 @@
                         <input type="text" name="rol_cap" id="soloLetras_cc" class="form-control" placeholder="Ingrese Cargo del capacitado*" aria-label="Cargo capacitado">
                     </div>
                 </div>
-
-
-
+                <br>
 
                 <!--multiple document upload-->
-                <div class="d-flex justify-content-auto">  {{--revisar la subida multiple de documentos--}}
-                    <div class="col-md-3 mb-3 pl-1 border-2 subirDocs mx-auto">
-                        <label for="formFileMultiple" class="form-label"><b>Documentos de la capacitación</b></label>
+                <div class="d-flex justify-content-start align-items-start">  {{--revisar la subida multiple de documentos--}}
+                    <div class="col-md-5 mb-3 pl-1 border-2 subirDocs ">
+                        <label class="form-label" for="formFileMultiple"><b>Documentos de la capacitación</b></label>
                         <input class="form-control" type="file" name="documentos" id="formFileMultiple" multiple>
                         <br>
                         {{-- <button class="btn btn-success" type="submit">Subir Documentos</button> --}}
                         <button class="btn btn-success" type="submit" data-toggle="modal" data-target="#modalError">Subir Documentos</button>
                     </div>
                 </div>
+
+            {{-- CAPACITACIONES GENERALES PARA TODOS LOS COLABORADORES --}}
+
+                {{-- ODI --}}
+                <div class="d-flex justify-content-start align-items-start">
+                    <div class="col-md-5 mb-3 pl-1 border-2 ODI ">
+                        <label class="form-label" for="inputGroupFileODI" ><b>ODI</b></label>
+                        <input class="form-control" type="file" name="ODI" id="inputGroupFileODI">
+                    </div>
+                </div>
+
+                {{-- Uso y Manejo Extintores --}}
+                <div class="d-flex justify-content-start align-items-start">
+                    <div class="col-md-5 mb-3 pl-1 border-2 Extintores ">
+                        <label class="form-label" for="inputGroupFileExtintores" ><b>Uso y Manejo Extintores</b></label>
+                        <input class="form-control" type="file" name="Extintores" id="inputGroupFileExtintores">
+                    </div>
+                </div>
+
+                {{-- Difusion Plan de Emergencia --}}
+                <div class="d-flex justify-content-start align-items-start">
+                    <div class="col-md-5 mb-3 pl-1 border-2 Difusion">
+                        <label class="form-label" for="inputGroupFileDifusion" ><b>Difusion Plan de Emergencia</b></label>
+                        <input class="form-control" type="file" name="Difusion" id="inputGroupFileDifusion">
+                    </div>
+                </div>
+
+                @yield('capAdministrativos')
+                @yield('capAseadores')
+                @yield('capCajeras')
+                @yield('capCondyAux')
+                @yield('capGeryJef')
+                @yield('capMantenimiento')
+
             </div>
         </div>
     </form>

@@ -36,7 +36,7 @@ Route::get('prueba', function () {
 Route::view('logincapacitaciones', 'auth.login')->name('login');
 
 //VISTA ADMINISTRADOR - BUSQUEDA RUT
-Route::post('admincapacitaciones/busquedarut', [BusquedaRutController::class, 'show'])->name('busquedaRut');
+Route::get('admincapacitaciones/busquedarut', [BusquedaRutController::class, 'perfil'])->name('busquedaRut');
 
 // Route::controller(BusquedaRutController::class)->group(function(){
 //     Route::get('admincapacitaciones/busquedarut', 'show')->name('busquedaRut'); //busqueda por rut.

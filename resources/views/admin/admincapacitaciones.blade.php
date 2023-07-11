@@ -1,6 +1,8 @@
 <!doctype html>
 <html lang="en">
     <head>
+        <link rel="icon" href="{{ asset('icons/logoAndimar.png') }}" type="image/x-icon">
+
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -55,9 +57,9 @@
             </div>
         </nav>
     <!--barra de busqueda por rut-->
-    <nav class="navbar bg-body-tertiary">
-        <div class="container-fluid">
-        <a class="navbar-brand busquedaRut">Ingrese Rut a Consultar</a>     <!--ALINEAR A LA IZQUIERDA admincapacitaciones.css-->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary navbar-smaller">
+        <div class="container-fluid d-flex ">
+        <a class="navbar-brand busquedaRut">Ingrese Rut a Consultar</a>     <!--ALINEAR A LA DERECHA admincapacitaciones.css-->
         <form action="{{ route('busquedaRut') }}" method="GET" class="d-flex" role="search">
             @csrf
             <input class="form-control me-2" type="search" name="busquedarut" id="busqueda_rut" placeholder="Rut del capacitado" aria-label="Search" maxlength="9">
