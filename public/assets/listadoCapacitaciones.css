@@ -16,12 +16,12 @@ font-weight: bold;
 }
 
 
-.btnAdminCap{
+.btnHomeCap{
     color: white;
     background-color: blue;
 }
 
-.btnAdminCap:hover{
+.btnHomeCap:hover{
     color: black;
     background-color: red;
     font-weight: bold;

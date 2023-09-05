@@ -6,7 +6,7 @@
 @endsection
 
 @section('botonesRedireccionCa')
-    <p><a class="btn btnAdminCap" href="{{route('adminCap')}}">Volver a capacitaciones</a></p>
+    <p><a class="btn btnHomeCap" href="{{route('homeCapacitaciones')}}">Volver a capacitaciones</a></p>
     <p><a class="btn btnFormCajeras" href="{{route('formCajeras')}}">Ingresar nueva capacitación</a></p>
     <h3>Listado Capacitaciones de Cajeras</h3>
 @endsection
@@ -28,7 +28,7 @@
             <td>{{ $lc->rol_cap }}</td>
             <td>{{ $lc->created_at->format('d-m-Y H:i') }}</td>
             <td>{{ $lc->updated_at->format('d-m-Y H:i') }}</td>
-            <td> <a class="btn btn-danger" href="/Archivos/cajeras/{{ $lc->documentos }}" target="blank_">Documentos</a> </td>
+            {{-- <td> <a class="btn btn-danger" href="/Archivos/cajeras/{{ $lc->documentos }}" target="blank_">Documentos</a> </td> --}}
             <td> <a class="btn btn-danger" href="{{route('perfilCapacitadoCa')}}">Modificar</a> </td>
         </tr>
     @empty

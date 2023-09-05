@@ -1,4 +1,3 @@
-
 @extends('layouts.listadoBase')
 
 @section('tituloAd')
@@ -6,7 +5,7 @@
 @endsection
 
 @section('botonesRedireccionAd')
-    <p><a class="btn btnAdminCap" href="{{route('adminCap')}}">Volver a Capacitaciones</a></p>
+    <p><a class="btn btnHomeCap" href="{{route('homeCapacitaciones')}}">Volver a Capacitaciones</a></p>
     <p><a class="btn btnFormAdministrativos" href="{{route('formAdministrativos')}}">Ingresar nueva capacitación</a></p>
     <h3>Listado de Capacitaciones de Administrativos</h3>
 @endsection
@@ -20,7 +19,7 @@
         <tr>
             <td>{{ $lad->id }}</td>
             {{-- <td>{{ $lad->rut_prev }}</td> --}}
-            <td>{{ $lad->nombre_prev }}</td>
+            <td>{{ $lad->nombre_prev }}</td>   {{--EN ESTE CAMPO DEBE MOSTRARSE EL NOMBRE DEL USUARIO LOGGEADO--}}
             {{-- <td>{{ $lad->apellidos_prev }}</td> --}}
             <td>{{ $lad->rut_cap }}</td>
             <td>{{ $lad->nombre_cap }}</td>
@@ -28,7 +27,7 @@
             <td>{{ $lad->rol_cap }}</td>
             <td>{{ $lad->created_at->format('d-m-Y H:i') }}</td>
             <td>{{ $lad->updated_at->format('d-m-Y H:i') }}</td>
-            <td> <a class="btn btn-danger" href="/Archivos/administrativos/{{ $lad->documentos }}" target="blank_">Documentos</a> </td>
+            {{-- <td> <a class="btn btn-danger" href="/Archivos/administrativos/{{ $lad->documentos }}" target="blank_">Documentos</a> </td> --}}
             <td><a class="btn btn-danger" href="{{route('perfilCapacitadoAd')}}">Modificar</a> </td>
         </tr>
     @empty

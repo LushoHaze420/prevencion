@@ -46,7 +46,7 @@
                         <th>Rol<br>Capacitado</th>
                         <th>Fecha<br>Creación </th>
                         <th>Fecha<br>Modificación </th>
-                        <th>Capacitaciones</th>
+                        {{-- <th>Capacitaciones</th> --}}
                         <th>Perfil</th>
                     </thead>
 

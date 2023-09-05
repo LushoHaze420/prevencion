@@ -5,9 +5,9 @@ use App\Http\Controllers\AseadoresController;
 use App\Http\Controllers\GeryJefController;
 use App\Http\Controllers\CondyAuxController;
 use App\Http\Controllers\AdministrativosController;
-use App\Http\Controllers\NuevoUsuarioController;
 use App\Http\Controllers\BusquedaRutController;
-use App\Http\Controllers\SesionController;
+use App\Http\Controllers\SesionAutenticadaController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 use PhpParser\Node\Stmt\Return_;
 /*
@@ -32,95 +32,83 @@ Route::get('prueba', function () {
 ///////////////////////////
 
 
-//LOGIN - PAGINA INICIAL
-Route::view('logincapacitaciones', 'auth.login')->name('login');
+//LOGIN
+Route::controller(SesionAutenticadaController::class)->group(function(){
+    Route::get('logincapacitaciones','create')->name('login');
+    Route::post('logincapacitaciones/storelogin','store')->name('storeLogin');
+    Route::post('logoutcapacitaciones','destroy')->name('logout');
+});
+//Route::view('logincapacitaciones', 'auth.login')->name('login');
 
-//VISTA ADMINISTRADOR - BUSQUEDA RUT
-Route::get('admincapacitaciones/busquedarut', [BusquedaRutController::class, 'perfil'])->name('busquedaRut');
+//BUSQUEDA RUT
+Route::get('capacitaciones/busquedarut', [BusquedaRutController::class, 'index'])->name('busquedaRut');
 
 // Route::controller(BusquedaRutController::class)->group(function(){
-//     Route::get('admincapacitaciones/busquedarut', 'show')->name('busquedaRut'); //busqueda por rut.
+//     Route::get('homeCapacitacionesacitaciones/busquedarut', 'show')->name('busquedaRut'); //busqueda por rut.
 // });
 
 
-Route::controller(NuevoUsuarioController::class)->group(function(){
-    Route::get('admincapacitaciones/nuevousuario','create')->name('formNuevoUsuario');
-    Route::get('admincapacitaciones/nuevousuario/listadousuarios', 'show')->name('listadoUsuarios');
-    Route::post('admincapacitaciones/storenuevousuario','store')->name('storeNuevoUsuario');
-    Route::get('admincapacitaciones/nuevousuario/listadousuarios/perfilusuario','perfilusuario')->name('perfilUsuario');
+Route::controller(UserController::class)->group(function(){
+    Route::get('capacitaciones/nuevousuario','create')->name('formNuevoUsuario');
+    Route::post('capacitaciones/nuevousuario/verificaremail', 'verificaremail')->name('verificarEmail');
+    Route::get('capacitaciones/nuevousuario/listadousuarios', 'show')->name('listadoUsuarios');
+    //Route::post('homeCapacitacionesacitaciones/nuevousuario/validarcorreo','validarcorreo')->name('validarCorreo');
+    Route::post('capacitaciones/storenuevousuario','store')->name('storeNuevoUsuario');
+    Route::get('capacitaciones/nuevousuario/listadousuarios/perfilusuario','perfilusuario')->name('perfilUsuario');
 });
 
-//VISTA PREVENCIONISTA
-Route::view('prevcapacitaciones', 'prevencionista.prevcapacitaciones')->name('prevCap');
-Route::view('prevcapacitaciones/prevbusquedarut', 'prevencionista.prevbusquedarut')->name('prevBusquedaRut'); //busqueda por rut.
 
+
+/*ADMINISTRATIVOS*/
+Route::controller(AdministrativosController::class)->group(function(){
+    Route::get('capacitaciones/administrativos','create')->name('formAdministrativos');
+    Route::get('capacitaciones/administrativos/listadocapacitacionesadministrativos','show')->name('listadoAdministrativos');
+    Route::post('capacitaciones/storeadministrativos','store')->name('storeCapacitacionAd');
+    Route::get('capacitaciones/administrativos/listadocapacitacionesadministrativos/perfilcapacitado','perfilcapacitado')->name('perfilCapacitadoAd');
+});
+
+
+/*ASEADORES*/
+Route::controller(AseadoresController::class)->group(function(){
+    Route::get('capacitaciones/aseadores','create')->name('formAseadores');
+    Route::get('capacitaciones/aseadores/listadocapacitacionesaseadores','show')->name('listadoAseadores');
+    Route::post('capacitaciones/storeaseadores','store')->name('storeCapacitacionA');
+    Route::get('capacitaciones/aseadores/listadocapacitacionesaseadores/perfilcapacitado','perfilcapacitado')->name('perfilCapacitadoAs');
+});
+
+
+/*CAJERAS*/
+Route::controller(CajerasController::class)->group(function(){
+    Route::get('capacitaciones/cajeras','create')->name('formCajeras');
+    Route::get('capacitaciones/cajeras/listadocapacitacionescajeras','show')->name('listadoCajeras');
+    Route::post('capacitaciones/storecajeras','store')->name('storeCapacitacionC');
+    Route::get('capacitaciones/cajeras/listadocapacitacionescajeras/perfilcapacitado','perfilcapacitado')->name('perfilCapacitadoCa');
+});
+
+
+/*CONDUCTORES Y AUXILIARES*/
+Route::controller(CondyAuxController::class)->group(function(){
+    Route::get('capacitaciones/condyaux','create')->name('formCondyAux');
+    Route::get('capacitaciones/condyaux/listadocapacitacionescondyaux','show')->name('listadoCondyAux');
+    Route::post('capacitaciones/storecondyaux','store')->name('storeCapacitacionCA');
+    Route::get('capacitaciones/condyaux/listadocapacitacionescondyaux/perfilcapacitado','perfilcapacitado')->name('perfilCapacitadoCya');
+});
+
+
+/*GERENCIA Y JEFATURA*/
+Route::controller(GeryJefController::class)->group(function(){
+    Route::get('capacitaciones/geryjef','create')->name('formGeryJef');
+    Route::get('capacitaciones/geryjef/listadocapacitacionesgeryjef','show')->name('listadoGeryJef');
+    Route::post('capacitaciones/storegeryjef','store')->name('storeCapacitacionGJ');
+    Route::get('capacitaciones/geryjef/listadocapacitacionesgeryjef/perfilcapacitado','perfilcapacitado')->name('perfilCapacitadoGyj');
+});
 
 
 /*MANTENIMIENTO*/
 Route::controller(MantenimientoController::class)->group(function(){
-    Route::get('admincapacitaciones','index')->name('adminCap');//pagina principal
-    Route::get('admincapacitaciones/mantenimiento', 'create')->name('formMantenimiento');  //ADMINISTRADOR
-    Route::get('admincapacitaciones/mantenimiento/listadocapacitacionesmantenimiento', 'show')->name('listadoMantenimiento');
-    Route::post('admincapacitaciones/storecapacitacion', 'store')->name('storeCapacitacionM');
-    Route::get('admincapacitaciones/mantenimiento/listadocapacitacionesmantenimiento/perfilcapacitado','perfilcapacitado')->name('perfilCapacitadoMa');
-
-    //Route::get('prevcapacitaciones/prevmantenimiento', 'create')->name('prevFormMantenimiento'); //PREVENCIONISTA
-    //Route::get('prevcapacitaciones/prevmantenimiento/listadocapacitacionesmantenimiento', 'show')->name('prevListadoMantenimiento');
-    //Route::post('prevcapacitaciones/storecapacitacion', 'store')->name('storeCapacitacionM');
-});
-
-/*CAJERAS*/
-Route::controller(CajerasController::class)->group(function(){
-    Route::get('admincapacitaciones/cajeras','create')->name('formCajeras'); //ADMINISTRADOR
-    Route::get('admincapacitaciones/cajeras/listadocapacitacionescajeras','show')->name('listadoCajeras');
-    Route::post('admincapacitaciones/storecajeras','store')->name('storeCapacitacionC');
-    Route::get('admincapacitaciones/cajeras/listadocapacitacionescajeras/perfilcapacitado','perfilcapacitado')->name('perfilCapacitadoCa');
-    //Route::get('prevcapacitaciones/prevcajeras','create')->name('prevFormCajeras'); //PREVENCIONISTA
-    //Route::get('prevcapacitaciones/prevcajeras/listadocapacitacionescajeras','show')->name('prevListadoCajeras');
-    //Route::post('prevcapacitaciones/storecajeras','store')->name('storeCapacitacionC');
-});
-
-/*ASEADORES*/
-Route::controller(AseadoresController::class)->group(function(){
-    Route::get('admincapacitaciones/aseadores','create')->name('formAseadores'); //ADMINISTRADOR
-    Route::get('admincapacitaciones/aseadores/listadocapacitacionesaseadores','show')->name('listadoAseadores');
-    Route::post('admincapacitaciones/storeaseadores','store')->name('storeCapacitacionA');
-    Route::get('admincapacitaciones/aseadores/listadocapacitacionesaseadores/perfilcapacitado','perfilcapacitado')->name('perfilCapacitadoAs');
-    //Route::get('prevcapacitaciones/prevaseadores','create')->name('prevFormAseadores'); //PREVENCIONISTA
-    //Route::get('prevcapacitaciones/prevaseadores/listadocapacitacionesaseadores','show')->name('prevListadoAseadores');
-    //Route::post('prevcapacitaciones/storeaseadores','store')->name('storeCapacitacionA');
-});
-
-/*GERENCIA Y JEFATURA*/
-Route::controller(GeryJefController::class)->group(function(){
-    Route::get('admincapacitaciones/geryjef','create')->name('formGeryJef'); //ADMINISTRADOR
-    Route::get('admincapacitaciones/geryjef/listadocapacitacionesgeryjef','show')->name('listadoGeryJef');
-    Route::post('admincapacitaciones/storegeryjef','store')->name('storeCapacitacionGJ');
-    Route::get('admincapacitaciones/geryjef/listadocapacitacionesgeryjef/perfilcapacitado','perfilcapacitado')->name('perfilCapacitadoGyj');
-    //Route::get('prevcapacitaciones/prevgeryjef','create')->name('prevFormGeryJef'); //PREVENCIONISTA
-    //Route::get('prevcapacitaciones/prevgeryjef/listadocapacitacionesgeryjef','show')->name('prevListadoGeryJef');
-    //Route::post('prevcapacitaciones/storegeryjef','store')->name('storeCapacitacionGJ');
-});
-
-/*CONDUCTORES Y AUXILIARES*/
-Route::controller(CondyAuxController::class)->group(function(){
-    Route::get('admincapacitaciones/condyaux','create')->name('formCondyAux'); //ADMINISTRADOR
-    Route::get('admincapacitaciones/condyaux/listadocapacitacionescondyaux','show')->name('listadoCondyAux');
-    Route::post('admincapacitaciones/storecondyaux','store')->name('storeCapacitacionCA');
-    Route::get('admincapacitaciones/condyaux/listadocapacitacionescondyaux/perfilcapacitado','perfilcapacitado')->name('perfilCapacitadoCya');
-    //Route::get('prevcapacitaciones/prevcondyaux','create')->name('prevFormCondyAux'); //PREVENCIONISTA
-    //Route::get('prevcapacitaciones/prevcondyaux/listadocapacitacionescondyaux','show')->name('prevListadoCondyAux');
-    //Route::post('prevcapacitaciones/storecondyaux','store')->name('storeCapacitacionCA');
-});
-
-/*ADMINISTRATIVOS*/
-Route::controller(AdministrativosController::class)->group(function(){
-    Route::get('admincapacitaciones/administrativos','create')->name('formAdministrativos'); //ADMINISTRADOR
-    Route::get('admincapacitaciones/administrativos/listadocapacitacionesadministrativos','show')->name('listadoAdministrativos');
-    Route::post('admincapacitaciones/storeadministrativos','store')->name('storeCapacitacionAd');
-    Route::get('admincapacitaciones/administrativos/listadocapacitacionesadministrativos/perfilcapacitado','perfilcapacitado')->name('perfilCapacitadoAd');
-
-    //Route::get('prevcapacitaciones/prevadministrativos','create')->name('prevFormAdministrativos'); //PREVENCION
-    //Route::get('prevcapacitaciones/prevadministrativos/listadocapacitacionesadministrativos','show')->name('prevListadoAdministrativos');
-    //Route::post('prevcapacitaciones/storeadministrativos','store')->name('storeCapacitacionAd');
+    Route::get('capacitaciones','index')->name('homeCapacitaciones');//pagina principal
+    Route::get('capacitaciones/mantenimiento', 'create')->name('formMantenimiento');
+    Route::get('capacitaciones/mantenimiento/listadocapacitacionesmantenimiento', 'show')->name('listadoMantenimiento');
+    Route::post('capacitaciones/storecapacitacion', 'store')->name('storeCapacitacionM');
+    Route::get('capacitaciones/mantenimiento/listadocapacitacionesmantenimiento/perfilcapacitado','perfilcapacitado')->name('perfilCapacitadoMa');
 });

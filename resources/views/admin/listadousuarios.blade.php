@@ -19,7 +19,7 @@
 
 <body class="p-3 m-1 border-1 listadoCapacitaciones">
     <div class="container">
-        <p><a class="btn btnAdminCap" href="{{route('adminCap')}}">Regresar a Capacitaciones</a></p> {{--boton para volver a seleccionar capacitación--}}
+        <p><a class="btn btnHomeCap" href="{{route('homeCapacitaciones')}}">Regresar a Capacitaciones</a></p> {{--boton para volver a seleccionar capacitación--}}
         <p><a class="btn btnFormNuevoUsuario" href="{{route('formNuevoUsuario')}}">Ingresar nuevo usuario</a></p> {{--boton para volver a crear nuevo usuario--}}
         <h3>Listado Usuarios</h3>
         <div class="card">
@@ -41,11 +41,11 @@
                         @forelse($listadousuarios as $lu)
                             <tr>
                                 <td>{{ $lu->id }}</td>
-                                <td>{{ $lu->rut_NU }}</td>
-                                <td>{{ $lu->nombre_NU }}</td>
-                                <td>{{ $lu->apellido_NU }}</td>
-                                <td>{{ $lu->email_NU }}</td>
-                                <td>{{ $lu->rol_NU }}</td>
+                                <td>{{ $lu->rut }}</td>
+                                <td>{{ $lu->name }}</td>
+                                <td>{{ $lu->last_name }}</td>
+                                <td>{{ $lu->email }}</td>
+                                <td>{{ $lu->role }}</td>
                                 <td>{{ $lu->created_at->format('d-m-Y H:i') }}</td>
                                 <td>{{ $lu->updated_at->format('d-m-Y H:i') }}</td>
                                 <td> <a class="btn btn-danger" href="{{ route ('perfilUsuario')}}">Modificar</a> </td> {{--, ['id' => $lu->id]--}}

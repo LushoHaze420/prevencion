@@ -17,7 +17,7 @@
 </head>
 <body class="p-3 m-1 border-1 perfil">
     <div class="container">
-        <p><a class="btn btn_AdminCap" href="{{route('adminCap')}}">Regresar a Capacitaciones</a></p>{{--boton para volver a seleccionar capacitación--}}
+        <p><a class="btn btn_homeCapacitaciones" href="{{route('homeCapacitaciones')}}">Regresar a Capacitaciones</a></p>{{--boton para volver a seleccionar capacitación--}}
         <p><a class="btn btn_FormNuevoUsuario" href="{{route('formNuevoUsuario')}}">Ingresar nuevo usuario</a></p> {{--boton para volver a crear nuevo usuario--}}
         <p><a class="btn btn_VerNU" href="{{route('listadoUsuarios')}}">Volver a listado usuarios</a></p>
         <h3>Perfil Usuario</h3>
@@ -34,6 +34,7 @@
                         <th>Fecha<br>Creación </th>
                         <th>Fecha<br>Modificación </th>
                         <th>Estado</th>
+                        <th>Guardar</th>
                     </thead>
 
                     <tbody>
@@ -43,10 +44,18 @@
                             <td></td>
                             <td></td>
                             <td></td>
-                            <td></td>
+                            <td><select class="form-select " name="roleUpdate" aria-label="seleccion de rol">
+                                <option selected>Seleccione Rol</option>
+                                @role('rol_usuario_superadmin')
+                                <option value="Admin" name="rol_usuario_admin">Administrador</option> <!--solo el superadmin puede crear administradores-->
+                                @endrole
+                                <option value="Prev" name="rol_usuario_prevencionista">Prevencionista</option>
+                                <option value="Cons" name="rol_usuario_consultor">Consultor</option>
+                            </select></td>
                             <td></td>
                             <td></td>
                             <td> <a class="btn btn-danger" href="#">Activo/Inactivo</a> </td>
+                            <td> <a class="btn btn-danger" href="#">Guardar</a> </td>
                         </tr>
                     </tbody>
 
@@ -75,8 +84,8 @@
         </div>
         <br>
         <h4>Falta match con el usuario seleccionado y los controladores para editar los datos</h4>
-
     </div>
+
 <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
 <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js"></script>

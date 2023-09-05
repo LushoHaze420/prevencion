@@ -18,7 +18,7 @@
 
 <body class="p-3 m-1 border-1 listadoCapacitaciones">
     <div class="container">
-        <p><a class="btn btnAdminCap" href="{{route('adminCap')}}">Volver a capacitaciones</a></p> {{--boton para ingresar nueva capacitación de mantenimiento--}}
+        <p><a class="btn btnHomeCap" href="{{route('homeCapacitaciones')}}">Volver a capacitaciones</a></p> {{--boton para ingresar nueva capacitación de mantenimiento--}}
         <h3>Busqueda de Capacitado por Rut</h3>
         <div class="card">
             <div class="card-body">
@@ -56,10 +56,35 @@
     </div>
     <br>
     <div class="container">
+        <h3>Listado De Capacitaciones</h3>
         <div class="card">
             <div class="card-body">
-                <h4>Capacitaciones</h4>
-                <h5>aki va el dashboard</h5>
+                <ul style="list-style-type: none; padding-left: 0;">
+                    <li>
+                        <span><b>ODI</b></span>
+                        <div>
+                            <button class="btn btn-primary" onclick="window.open('', '_blank')">Acceder</button>
+                            <input class="btn btn-secondary" type="file" id="fileInput"  accept=".pdf" onclick="replaceDocument()" onchange="showSelectedFileName()">
+                            <button class="btn btn-success" onclick="saveChanges()">Guardar cambios</button>
+                        </div>                    </li>
+                    <br>
+                    <li>
+                        <span><b>Uso y Manejo de Extintores</b></span>
+                        <div>
+                            <button class="btn btn-primary" onclick="window.open('', '_blank')">Acceder</button>
+                            <input class="btn btn-secondary" type="file" id="fileInput"  accept=".pdf" onclick="replaceDocument()" onchange="showSelectedFileName()">
+                            <button class="btn btn-success" onclick="saveChanges()">Guardar cambios</button>
+                        </div>                    </li>
+                    <br>
+                    <li>
+                        <span><b>Difusion Plan de Emergencia</b></span>
+                        <div>
+                            <button class="btn btn-primary" onclick="window.open('', '_blank')">Acceder</button>
+                            <input class="btn btn-secondary" type="file" id="fileInput"  accept=".pdf" onclick="replaceDocument()" onchange="showSelectedFileName()">
+                            <button class="btn btn-success" onclick="saveChanges()">Guardar cambios</button>
+                        </div>                    </li>
+                </ul>
+
             </div>
         </div>
     </div>

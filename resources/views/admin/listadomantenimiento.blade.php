@@ -5,7 +5,7 @@
 @endsection
 
 @section('botonesRedireccionMa')
-    <p><a class="btn btnAdminCap" href="{{route('adminCap')}}">Volver a capacitaciones</a></p> {{--boton para ingresar nueva capacitación de amntenimiento--}}
+    <p><a class="btn btnHomeCap" href="{{route('homeCapacitaciones')}}">Volver a capacitaciones</a></p> {{--boton para ingresar nueva capacitación de amntenimiento--}}
     <p><a class="btn btnFormMantenimiento" href="{{route('formMantenimiento')}}">Ingresar nueva capacitacion</a></p> {{--boton para volver a capacitaciónes--}}
     <h3>Listado Capacitaciones de Mantenimiento</h3>
 @endsection
@@ -25,7 +25,7 @@
             <td>{{ $lm->rol_cap }}</td>
             <td>{{ $lm->created_at->format('d-m-Y H:i') }}</td>
             <td>{{ $lm->updated_at->format('d-m-Y H:i') }}</td>
-            <td> <a class="btn btn-danger" href="/Archivos/mantenimiento/{{ $lm->documentos }}" target="blank_">Documentos</a> </td>
+            {{-- <td> <a class="btn btn-danger" href="/Archivos/mantenimiento/{{ $lm->documentos }}" target="blank_">Documentos</a> </td> --}}
             <td> <a class="btn btn-danger" href="{{route('perfilCapacitadoMa')}}">Modificar</a> </td>
         </tr>
     @empty

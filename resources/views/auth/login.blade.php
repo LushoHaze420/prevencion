@@ -45,7 +45,7 @@
                         </div>
                     </div>
                     <div class="card-body">
-                        <form action="" method="POST"></form> <!--crear bd para activar el action-->
+                        <form action="{{route('login')}}" method="POST"></form> <!--crear bd para activar el action-->
                             @csrf
                             <div class="input-group form-group">
                                 <div class="input-group-prepend">
@@ -68,8 +68,7 @@
                             </div>
 
                             <div class="form-group">
-                                <a class="btn float-right login_btn" type="submit" value="Login" href="{{route('adminCap')}}">Login</a><!--boton de prueba, comparar credenciales ocupando otro metodo-->
-                                <!--<input type="submit" value="Login" class="btn float-right login_btn" href="{route('capacitaciones')}}" >terminar este boton y agregar esto -->
+                                <a class="btn float-right login_btn" type="submit" value="Login" href="{{route('homeCapacitaciones')}}">Login</a>
                             </div>
                         </form>
                     </div>
@@ -79,7 +78,7 @@
                             No tienes cuenta?
                             <a class="" href="#" data-bs-toggle="modal" data-bs-target="#registrateModal">Regístrate</a>
                         </div>
-                        <div class="d-flex justify-content-center otc">
+                        <div class="d-flex justify-content-center otc"> <!--olvidaste tu contraseña-->
                             <a class="" href="#" data-bs-toggle="modal" data-bs-target="#olviContraModal">Olvidaste tu contraseña?</a>
                         </div>
                     </div>

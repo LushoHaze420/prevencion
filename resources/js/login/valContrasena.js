@@ -12,3 +12,4 @@ inputField_valContrasena.addEventListener("input", function() {  //maximo 9 cara
         maximo_caracteres_valContrasena.innerHTML = "";
     }
 });
+

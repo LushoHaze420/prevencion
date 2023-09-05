@@ -7,7 +7,7 @@ use App\Models\Mantenimiento;
 
 class MantenimientoController extends Controller{
     public function index(){
-        return view('admin.admincapacitaciones');//pagina principal
+        return view('admin.capacitaciones');//pagina principal
     }
 
     public function create(){

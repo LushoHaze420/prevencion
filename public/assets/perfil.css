@@ -9,12 +9,12 @@
     }
 
 
-.btn_AdminCap{
+.btn_homeCapacitaciones{
     color: white;
     background-color: blue;
 }
 
-.btn_AdminCap:hover{
+.btn_homeCapacitaciones:hover{
     color: black;
     background-color: red;
     font-weight: bold;

@@ -39,7 +39,7 @@
         @yield('tituloArea')
     </div>
     <div class="center g-5 p-2 border-2 botonListadoCap">
-        @yield('adminCap')
+        @yield('homeCapacitaciones')
         @yield('botonListadoMantenimiento')
         {{-- @yield('botonPrevListadoMantenimiento')     revisar --}}
         @yield('botonListadoCajeras')
@@ -86,7 +86,7 @@
                 <div class="row justify-content-auto g-5 p-1 border-2">
                     <div class="col-md-3">
                         <label for="rut_cap" class="form-label"><b>Rut capacitado</b></label>
-                        <input type="text" name="rut_cap" id="rut_cap" class="form-control" placeholder="Ingrese Rut del capacitado*" aria-label="Rut capacitado" maxlength="9">
+                        <input type="text" name="rut_cap" id="rut_cap" class="form-control" placeholder="Ingrese Rut del capacitado*" aria-label="Rut capacitado" maxlength="9" autofocus="autofocus">
                         <span id="maximo_caracteres_rc" class="form-text"></span>
                     </div>
                 </div>

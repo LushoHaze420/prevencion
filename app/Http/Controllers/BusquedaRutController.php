@@ -10,7 +10,6 @@ use App\Models\Cajeras;
 use App\Models\CondyAux;
 use App\Models\GeryJef;
 use App\Models\Mantenimiento;
-use App\Models\NuevoUsuario;
 
 
 class BusquedaRutController extends Controller
@@ -22,7 +21,8 @@ class BusquedaRutController extends Controller
      */
     public function index()
     {
-        //
+        return view('admin.busquedarut');
+
     }
 
     /**
@@ -71,16 +71,6 @@ class BusquedaRutController extends Controller
             'listadoCapacitados' => $listadoCapacitados
         ]);
     }
-
-    public function perfil()
-    {
-        return view('admin.busquedarut');
-    }
-
-
-
-
-
 
     /**
      * Show the form for editing the specified resource.

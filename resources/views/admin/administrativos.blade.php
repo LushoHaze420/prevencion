@@ -9,8 +9,8 @@
 <h3><center>Administrativos</center></h3>
 @endsection
 
-@section('adminCap')
-<p><a class="btn btnAdminCap" href="{{route('adminCap')}}">Volver a Capacitaciones</a></p>
+@section('homeCapacitaciones')
+<p><a class="btn btnHomeCap" href="{{route('homeCapacitaciones')}}">Volver a Capacitaciones</a></p>
 @endsection
 
 @section('botonListadoAdministrativos')

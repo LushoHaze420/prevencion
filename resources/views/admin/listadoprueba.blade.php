@@ -17,7 +17,7 @@
 
 <body class="p-3 m-1 border-1 listadoCapacitaciones">
     <div class="container">
-        <p><a class="btn btnAdminCap" href="{{route('adminCap')}}">Volver a capacitaciones</a></p> {{--boton para ingresar nueva capacitación de amntenimiento--}}
+        <p><a class="btn btnHomeCap" href="{{route('homeCapacitaciones')}}">Volver a capacitaciones</a></p> {{--boton para ingresar nueva capacitación de amntenimiento--}}
         <p><a class="btn btnFormMantenimiento" href="{{route('formMantenimiento')}}">Ingresar nueva capacitacion</a></p> {{--boton para volver a capacitaciónes--}}
         <h3>Listado Capacitaciones de Mantenimiento</h3>
         <div class="card">

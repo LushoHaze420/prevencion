@@ -5,7 +5,7 @@
 @endsection
 
 @section('botonesRedireccionAs')
-    <p><a class="btn btnAdminCap" href="{{route('adminCap')}}">Volver a capacitaciones</a></p>
+    <p><a class="btn btnHomeCap" href="{{route('homeCapacitaciones')}}">Volver a capacitaciones</a></p>
     <p><a class="btn btnFormAseadores" href="{{route('formAseadores')}}">Ingresar nueva capacitación</a></p>
     <h3>Listado Capacitaciones de Aseadores</h3>
 @endsection
@@ -25,7 +25,7 @@
             <td>{{ $la->rol_cap }}</td>
             <td>{{ $la->created_at->format('d-m-Y H:i') }}</td>
             <td>{{ $la->updated_at->format('d-m-Y H:i') }}</td>
-            <td> <a class="btn btn-danger" href="/Archivos/aseadores/{{ $la->documentos }}" target="blank_">Documentos</a> </td>
+            {{-- <td> <a class="btn btn-danger" href="/Archivos/aseadores/{{ $la->documentos }}" target="blank_">Documentos</a> </td> --}}
             <td> <a class="btn btn-danger" href="{{route('perfilCapacitadoAs')}}" >Modificar</a> </td>
         </tr>
     @empty

@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css?family=Numans');
 
 html,body{
-background-image: url('https://www.terminaldebuses.com/wp-content/uploads/2021/09/Buses-Andimar-767x437.jpg');
+background-image: url('/img/busesandimar.jpg');
 background-size: cover;
 background-repeat: no-repeat;
 height: 100%;
@@ -16,23 +16,15 @@ align-content: center;
 }
 
 .card{
-height: 600px; /*crear uno para registro*/
+height: 600px;
 margin-top: auto;
 margin-bottom: auto;
 width: 400px;
 background-color: rgba(0,0,0,0.5) !important;
 }
 
-.social_icon span{
-font-size: 60px;
-margin-left: 10px;
-color: blue;
-}
 
-.social_icon span:hover{
-color: red;
-cursor: pointer;
-}
+
 
 .card-header h3{
 color: white;
@@ -45,11 +37,7 @@ color: white;
 margin-bottom: 1px;
 }
 
-.social_icon{
-position: absolute;
-right: 20px;
-top: -45px;
-}
+
 
 .input-group-prepend span{    /*username and password tag*/
 width: 50px;
@@ -63,44 +51,7 @@ outline: 0 0 0 0  !important;
 box-shadow: 0 0 0 0 !important;
 }
 
-.remember{
-color: white;
-}
 
-.remember input{
-width: 20px;
-height: 20px;
-margin-left: 15px;
-margin-right: 5px;
-}
-
-.login_btn{
-color: white;
-background-color: blue;
-width: 100px;
-}
-
-.login_btn:hover{
-color: black;
-background-color: red;
-}
-
-.links{
-color: white;
-margin-top: 1px;
-}
-
-.links a{
-margin-left: 4px;
-}
-
-.links a:hover{
-color: red;
-}
-
-.otc a:hover{
-color: red;
-}
 
 .creaNU_btn{
 color: white;
@@ -126,14 +77,14 @@ color: black;
 background-color: red;
 }
 
-.adminCapBtn{
+.homeCapacitacionesBtn{
 color: white;
 background-color: blue;
 width: 140px;
 left: 50;
 }
 
-.adminCapBtn:hover{
+.homeCapacitacionesBtn:hover{
 color: black;
 background-color: red;
 }
