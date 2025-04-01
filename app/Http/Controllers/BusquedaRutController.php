@@ -10,6 +10,7 @@ use App\Models\Cajeras;
 use App\Models\CondyAux;
 use App\Models\GeryJef;
 use App\Models\Mantenimiento;
+use Barryvdh\DomPDF\Facade\Pdf;
 
 
 class BusquedaRutController extends Controller
@@ -71,6 +72,17 @@ class BusquedaRutController extends Controller
             'listadoCapacitados' => $listadoCapacitados
         ]);
     }
+
+    public function pdfbusquedarut(){
+        $pdfbusquedarut=BusquedaRut::all();
+        $pdf = Pdf::loadView('admin.reportebusquedarut', compact('pdfbusquedarut'));
+        //$fechaAd=Carbon::now()->format('d-m-Y H:i:s');->with('fechaAd', $fechaAd)
+        return $pdf->stream('reporte_busqueda_rut.pdf');  //stream para visualizar pdf, tambien permite descargar
+        //  return $ pdf->download('reporte_capacitaciones_administrativos.pdf'); solo para descargar pdf
+        //  https://github.com/barryvdh/laravel-dompdf
+        //  Repositorio para la libreria de PDF
+    }
+
 
     /**
      * Show the form for editing the specified resource.

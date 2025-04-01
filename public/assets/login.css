@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css?family=Numans');
 
 html,body{
-background-image: url('/img/etm-g8.jpg');
+background-image: url('/img/G8_2001.png');
 background-size: cover;
 background-repeat: no-repeat;
 height: 100%;
@@ -51,8 +51,6 @@ margin-bottom: 3px;
 color: white;
 margin-bottom: 1px;
 }
-
-
 
 .input-group-prepend span{    /*username and password tag*/
 width: 50px;

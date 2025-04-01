@@ -13,7 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('users', function (Blueprint $table) {  //esta migracion es para los usuarios del sistema, no debe utilizarse para el filtro de busqueda por rut, para eso buscar en las tablas de los departamentos.
+        Schema::create('users', function (Blueprint $table) {  /*esta migracion es para los usuarios del sistema,
+            no debe utilizarse para el filtro de busqueda por rut,
+            para eso buscar en las tablas de los departamentos.*/
             $table->id();
             $table->string('rut', 9)->unique();
             $table->string('name', 30);

@@ -52,7 +52,7 @@
                                 '<option value="-1">All</option>' +
                             '</select>' +
                             ' registros por página',
-                "zeroRecords": "Nada encontrado - Disculpa",
+                "zeroRecords": "Nada encontrado",
                 "info": "Mostrando la página _PAGE_ de _PAGES_",
                 "infoEmpty": "No records available",
                 "infoFiltered": "(filtrado de _MAX_ registros totales)",

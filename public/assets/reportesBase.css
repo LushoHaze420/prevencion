@@ -1,0 +1,92 @@
+.reportesBase {
+    background-image: url('/img/andi4.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    font-weight: bold;
+}
+
+.btnHomeCap{
+    color: white;
+    background-color: blue;
+}
+
+.btnHomeCap:hover{
+    color: black;
+    background-color: red;
+    font-weight: bold;
+}
+
+.card{
+    width: auto;  /* revisar*/
+    text-align: center;
+    margin: 0 auto;
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+.btnRepAdministrativos{
+    color: white;
+    background-color: blue;
+}
+
+.btnRepAdministrativos:hover{
+    color: black;
+    background-color: red;
+    font-weight: bold;
+}
+
+.btnRepAseadores{
+    color: white;
+    background-color: blue;
+}
+
+.btnRepAseadores:hover{
+    color: black;
+    background-color: red;
+    font-weight: bold;
+}
+
+.btnRepCajeras{
+    color: white;
+    background-color: blue;
+}
+
+.btnRepCajeras:hover{
+    color: black;
+    background-color: red;
+    font-weight: bold;
+}
+
+.btnRepCondyAux{
+    color: white;
+    background-color: blue;
+}
+
+.btnRepCondyAux:hover{
+    color: black;
+    background-color: red;
+    font-weight: bold;
+}
+
+.btnRepGeryJef{
+    color: white;
+    background-color: blue;
+}
+
+.btnRepGeryJef:hover{
+    color: black;
+    background-color: red;
+    font-weight: bold;
+}
+
+.btnRepMantenimiento{
+    color: white;
+    background-color: blue;
+}
+
+.btnRepMantenimiento:hover{
+    color: black;
+    background-color: red;
+    font-weight: bold;
+}

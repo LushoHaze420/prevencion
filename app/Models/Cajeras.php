@@ -17,13 +17,16 @@ class Cajeras extends Model
     public $timestamps=true;
 
     protected $fillable=[
-        //'rut_prev',
         'nombre_prev',
-        //'apellidos_prev',
         'rut_cap',
         'nombre_cap',
         'apellidos_cap',
         'rol_cap',
-        'documentos',
+        'odi',//General
+        'extintores',//General
+        'difusion',//General
+        'atencion_publico',
+        'tmertc',
+        'diploma',//General
         ];
 }

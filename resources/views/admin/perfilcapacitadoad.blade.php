@@ -9,8 +9,8 @@
     <li>
         <span><b>Primeros Auxilios</b></span>
         <div>
-            <button class="btn btn-primary" onclick="openDocument('documento4.pdf')">Acceder</button>
-            <button class="btn btn-secondary" onclick="replaceDocument()">Reemplazar documento</button>
+            <button class="btn btn-primary" onclick="window.open('', '_blank')">Acceder</button>
+            <input class="btn btn-secondary" type="file" id="fileInput"  accept=".pdf" onclick="replaceDocument()" onchange="showSelectedFileName()">
             <button class="btn btn-success" onclick="saveChanges()">Guardar cambios</button>
         </div>
     </li>
@@ -18,11 +18,13 @@
     <li>
         <span><b>TMERT</b></span>
         <div>
-            <button class="btn btn-primary" onclick="openDocument('documento5.pdf')">Acceder</button>
-            <button class="btn btn-secondary" onclick="replaceDocument()">Reemplazar documento</button>
+            <button class="btn btn-primary" onclick="window.open('', '_blank')">Acceder</button>
+            <input class="btn btn-secondary" type="file" id="fileInput"  accept=".pdf" onclick="replaceDocument()" onchange="showSelectedFileName()">
             <button class="btn btn-success" onclick="saveChanges()">Guardar cambios</button>
         </div>
     </li>
+
+
 @endsection
 
 

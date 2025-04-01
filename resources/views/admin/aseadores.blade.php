@@ -1,10 +1,10 @@
 @extends('layouts.formularioBase')
 
-@section('tituloPaginaA')
+@section('tituloPagina')
 <title>Aseadores</title>
 @endsection
 
-@section('tituloArea')
+@section('tituloDepartamento')
 <h3><center>Aseadores</center></h3>
 @endsection
 
@@ -21,7 +21,7 @@
     <div class="d-flex justify-content-start align-items-start">
         <div class="col-md-5 mb-3 pl-1 border-2 LimpiezaDesinfeccionCovid">
             <label class="form-label" for="inputGroupFileLimpiezaDesinfeccionCovid" ><b>Limpieza y Desinfeccion frente a Covid</b></label>
-            <input class="form-control" type="file" name="LimpiezaDesinfeccionCovid" id="inputGroupFileLimpiezaDesinfeccionCovid">
+            <input class="form-control" type="file" name="limpieza_desinfeccion_covid" id="inputGroupFileLimpiezaDesinfeccionCovid">
         </div>
     </div>
 
@@ -29,7 +29,7 @@
     <div class="d-flex justify-content-start align-items-start">
         <div class="col-md-5 mb-3 pl-1 border-2 UsoSustanciasPeligrosas">
             <label class="form-label" for="inputGroupFileUsoSustanciasPeligrosas" ><b>Uso de Sustancias Peligrosas</b></label>
-            <input class="form-control" type="file" name="UsoSustanciasPeligrosas" id="inputGroupFileUsoSustanciasPeligrosas">
+            <input class="form-control" type="file" name="uso_sustancias_peligrosas" id="inputGroupFileUsoSustanciasPeligrosas">
         </div>
     </div>
 
@@ -37,7 +37,7 @@
         <div class="d-flex justify-content-start align-items-start">
             <div class="col-md-5 mb-3 pl-1 border-2 UsoCorrectoEPP">
                 <label class="form-label" for="inputGroupFileUsoCorrectoEPP" ><b>Uso Correcto de EPP</b></label>
-                <input class="form-control" type="file" name="UsoCorrectoEPP" id="inputGroupFileUsoCorrectoEPP">
+                <input class="form-control" type="file" name="uso_correcto_epp" id="inputGroupFileUsoCorrectoEPP">
             </div>
         </div>
 @endsection

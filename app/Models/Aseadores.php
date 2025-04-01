@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Concerns\HasTimestamps;
+use Illuminate\Support\Facades\Storage;
 
 class Aseadores extends Model
 {
@@ -17,13 +18,17 @@ class Aseadores extends Model
     public $timestamps=true;
 
     protected $fillable=[
-        //'rut_prev',
         'nombre_prev',
-        //'apellidos_prev',
         'rut_cap',
         'nombre_cap',
         'apellidos_cap',
         'rol_cap',
-        'documentos',
+        'odi',//General
+        'extintores',//General
+        'difusion',//General
+        'limpieza_desinfeccion_covid',
+        'uso_sustancias_peligrosas',
+        'uso_correcto_epp',
+        'diploma'//general
         ];
 }

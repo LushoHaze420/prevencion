@@ -1,10 +1,10 @@
 @extends('layouts.formularioBase')
 
-@section('tituloPaginaC')
+@section('tituloPagina')
 <title>Cajeras</title>
 @endsection
 
-@section('tituloArea')
+@section('tituloDepartamento')
 <h3><center>Cajeras</center></h3>
 @endsection
 
@@ -21,7 +21,7 @@
     <div class="d-flex justify-content-start align-items-start">
         <div class="col-md-5 mb-3 pl-1 border-2 AtencionPublico">
             <label class="form-label" for="inputGroupFileAtencionPublico" ><b>Atención de Publico</b></label>
-            <input class="form-control" type="file" name="AtencionPublico" id="inputGroupFileAtencionPublico">
+            <input class="form-control" type="file" name="atencion_publico" id="inputGroupFileAtencionPublico">
         </div>
     </div>
 
@@ -29,7 +29,7 @@
         <div class="d-flex justify-content-start align-items-start">
             <div class="col-md-5 mb-3 pl-1 border-2 TMERTc">
                 <label class="form-label" for="inputGroupFileTMERTc" ><b>TMERT</b></label>
-                <input class="form-control" type="file" name="TMERTc" id="inputGroupFileTMERTc">
+                <input class="form-control" type="file" name="tmertc" id="inputGroupFileTMERTc">
             </div>
         </div>
 

@@ -55,7 +55,6 @@
                         </tr>
                     </tbody>
 
-
                     {{-- <tbody>
                         @forelse($perfilusuarios as $pu)
                             <tr>
@@ -111,6 +110,15 @@
                     <br>
                     <li>
                         <span><b>Difusion Plan de Emergencia</b></span>
+                        <div>
+                            <button class="btn btn-primary" onclick="window.open('', '_blank')">Acceder</button>
+                            <input class="btn btn-secondary" type="file" id="fileInput"  accept=".pdf" onclick="replaceDocument()" onchange="showSelectedFileName()">
+                            <button class="btn btn-success" onclick="saveChanges()">Guardar cambios</button>
+                        </div>
+                    </li>
+                    <br>
+                    <li>
+                        <span><b>Diploma de Capacitacion</b></span>
                         <div>
                             <button class="btn btn-primary" onclick="window.open('', '_blank')">Acceder</button>
                             <input class="btn btn-secondary" type="file" id="fileInput"  accept=".pdf" onclick="replaceDocument()" onchange="showSelectedFileName()">

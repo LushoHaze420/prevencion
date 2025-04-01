@@ -1,10 +1,10 @@
 @extends('layouts.formularioBase')
 
-@section('tituloPaginaM')
+@section('tituloPagina')
 <title>Mantenimiento</title>
 @endsection
 
-@section('tituloArea')
+@section('tituloDepartamento')
 <h3><center>Mantenimiento</center></h3>
 @endsection
 
@@ -21,7 +21,7 @@
     <div class="d-flex justify-content-start align-items-start">
         <div class="col-md-5 mb-3 pl-1 border-2 ManejoManualCargaMa">
             <label class="form-label" for="inputGroupFileManejoManualCargaMa" ><b>Manejo Manual de Carga</b></label>
-            <input class="form-control" type="file" name="ManejoManualCargaMa" id="inputGroupFileManejoManualCargaMa">
+            <input class="form-control" type="file" name="manejo_manual_carga_ma" id="inputGroupFileManejoManualCargaMa">
         </div>
     </div>
 
@@ -29,7 +29,7 @@
     <div class="d-flex justify-content-start align-items-start">
         <div class="col-md-5 mb-3 pl-1 border-2 TranstornosMusculoEsqueleticos">
             <label class="form-label" for="inputGroupFileTranstornosMusculoEsqueleticos" ><b>Transtornos Musculo Esqueleticos</b></label>
-            <input class="form-control" type="file" name="TranstornosMusculoEsqueleticos" id="inputGroupFileTranstornosMusculoEsqueleticos">
+            <input class="form-control" type="file" name="transtornos_musculo_esqueleticos" id="inputGroupFileTranstornosMusculoEsqueleticos">
         </div>
     </div>
 
@@ -37,7 +37,7 @@
     <div class="d-flex justify-content-start align-items-start">
         <div class="col-md-5 mb-3 pl-1 border-2 PrimerosAuxilios">
             <label class="form-label" for="inputGroupFilePrimerosAuxilios" ><b>Primeros Auxilios</b></label>
-            <input class="form-control" type="file" name="PrimerosAuxilios" id="inputGroupFilePrimerosAuxilios">
+            <input class="form-control" type="file" name="primeros_auxilios" id="inputGroupFilePrimerosAuxilios">
         </div>
     </div>
 
@@ -45,7 +45,7 @@
     <div class="d-flex justify-content-start align-items-start">
         <div class="col-md-5 mb-3 pl-1 border-2 ManejoSustanciasPeligrosas">
             <label class="form-label" for="inputGroupFileManejoSustanciasPeligrosas" ><b>Manejo de Sustancias Peligrosas</b></label>
-            <input class="form-control" type="file" name="ManejoSustanciasPeligrosas" id="inputGroupFileManejoSustanciasPeligrosas">
+            <input class="form-control" type="file" name="manejo_sustancias_peligrosas" id="inputGroupFileManejoSustanciasPeligrosas">
         </div>
     </div>
 
@@ -53,7 +53,7 @@
     <div class="d-flex justify-content-start align-items-start">
         <div class="col-md-5 mb-3 pl-1 border-2 AlmacenamientoSustanciasPeligrosas">
             <label class="form-label" for="inputGroupFileAlmacenamientoSustanciasPeligrosas" ><b>Almacenamiento de Sustancias Peligrosas</b></label>
-            <input class="form-control" type="file" name="AlmacenamientoSustanciasPeligrosas" id="inputGroupFileAlmacenamientoSustanciasPeligrosas">
+            <input class="form-control" type="file" name="almacenamiento_sustancias_peligrosas" id="inputGroupFileAlmacenamientoSustanciasPeligrosas">
         </div>
     </div>
 
@@ -61,7 +61,7 @@
     <div class="d-flex justify-content-start align-items-start">
         <div class="col-md-5 mb-3 pl-1 border-2 PrevencionExposicionRadiacionUV">
             <label class="form-label" for="inputGroupFilePrevencionExposicionRadiacionUV" ><b>Prevencion a la Exposicion de Radiacion UV</b></label>
-            <input class="form-control" type="file" name="PrevencionExposicionRadiacionUV" id="inputGroupFilePrevencionExposicionRadiacionUV">
+            <input class="form-control" type="file" name="prevencion_exposicion_radiacion_uv" id="inputGroupFilePrevencionExposicionRadiacionUV">
         </div>
     </div>
 
@@ -69,7 +69,7 @@
     <div class="d-flex justify-content-start align-items-start">
         <div class="col-md-5 mb-3 pl-1 border-2 UsoCorrectoEPP">
             <label class="form-label" for="inputGroupFileUsoCorrectoEPP" ><b>Uso Correcto de EPP</b></label>
-            <input class="form-control" type="file" name="UsoCorrectoEPP" id="inputGroupFileUsoCorrectoEPP">
+            <input class="form-control" type="file" name="uso_correcto_epp" id="inputGroupFileUsoCorrectoEPP">
         </div>
     </div>
 
@@ -77,7 +77,7 @@
     <div class="d-flex justify-content-start align-items-start">
         <div class="col-md-5 mb-3 pl-1 border-2 PlanEmergencia">
             <label class="form-label" for="inputGroupFilePlanEmergencia" ><b>Plan de Emergencia</b></label>
-            <input class="form-control" type="file" name="PlanEmergencia" id="inputGroupFilePlanEmergencia">
+            <input class="form-control" type="file" name="plan_emergencia" id="inputGroupFilePlanEmergencia">
         </div>
     </div>
 
@@ -85,7 +85,7 @@
     <div class="d-flex justify-content-start align-items-start">
         <div class="col-md-5 mb-3 pl-1 border-2 ControlRiesgosAltura">
             <label class="form-label" for="inputGroupFileControlRiesgosAltura" ><b>Control de Riesgos en Altura</b></label>
-            <input class="form-control" type="file" name="ControlRiesgosAltura" id="inputGroupFileControlRiesgosAltura">
+            <input class="form-control" type="file" name="control_riesgos_altura" id="inputGroupFileControlRiesgosAltura">
         </div>
     </div>
 
@@ -93,7 +93,7 @@
     <div class="d-flex justify-content-start align-items-start">
         <div class="col-md-5 mb-3 pl-1 border-2 CuidadoManos">
             <label class="form-label" for="inputGroupFileCuidadoManos" ><b>Cuidado de las Manos</b></label>
-            <input class="form-control" type="file" name="CuidadoManos" id="inputGroupFileCuidadoManos">
+            <input class="form-control" type="file" name="cuidado_manos" id="inputGroupFileCuidadoManos">
         </div>
     </div>
 
@@ -101,7 +101,7 @@
     <div class="d-flex justify-content-start align-items-start">
         <div class="col-md-5 mb-3 pl-1 border-2 OrientacionPrevencionRiesgos">
             <label class="form-label" for="inputGroupFileOrientacionPrevencionRiesgos" ><b>Orientacion en Prevencion de Riesgos</b></label>
-            <input class="form-control" type="file" name="OrientacionPrevencionRiesgos" id="inputGroupFileOrientacionPrevencionRiesgos">
+            <input class="form-control" type="file" name="orientacion_prevencion_riesgos" id="inputGroupFileOrientacionPrevencionRiesgos">
         </div>
     </div>
 
@@ -109,7 +109,7 @@
     <div class="d-flex justify-content-start align-items-start">
         <div class="col-md-5 mb-3 pl-1 border-2 PREXOR">
             <label class="form-label" for="inputGroupFilePREXOR" ><b>PREXOR</b></label>
-            <input class="form-control" type="file" name="PREXOR" id="inputGroupFilePREXOR">
+            <input class="form-control" type="file" name="prexor" id="inputGroupFilePREXOR">
         </div>
     </div>
 
@@ -117,7 +117,7 @@
     <div class="d-flex justify-content-start align-items-start">
         <div class="col-md-5 mb-3 pl-1 border-2 ActitudesPreventivas">
             <label class="form-label" for="inputGroupFileActitudesPreventivas" ><b>Actitudes Preventivas</b></label>
-            <input class="form-control" type="file" name="ActitudesPreventivas" id="inputGroupFileActitudesPreventivas">
+            <input class="form-control" type="file" name="actitudes_preventivas" id="inputGroupFileActitudesPreventivas">
         </div>
     </div>
 
@@ -125,7 +125,7 @@
     <div class="d-flex justify-content-start align-items-start">
         <div class="col-md-5 mb-3 pl-1 border-2 UsoHerramientasElectricasYMotrices">
             <label class="form-label" for="inputGroupFileUsoHerramientasElectricasYMotrices" ><b>Uso de Herramientas Electricas y Motrices</b></label>
-            <input class="form-control" type="file" name="UsoHerramientasElectricasYMotrices" id="inputGroupFileUsoHerramientasElectricasYMotrices">
+            <input class="form-control" type="file" name="uso_herramientas_electricas_y_motrices" id="inputGroupFileUsoHerramientasElectricasYMotrices">
         </div>
     </div>
 @endsection

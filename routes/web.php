@@ -8,6 +8,7 @@ use App\Http\Controllers\AdministrativosController;
 use App\Http\Controllers\BusquedaRutController;
 use App\Http\Controllers\SesionAutenticadaController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\CarbonController;
 use Illuminate\Support\Facades\Route;
 use PhpParser\Node\Stmt\Return_;
 /*
@@ -26,8 +27,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('prueba', function () {
-    return view('prueba');
+Route::get('', function () {
+    return view('');
 });
 ///////////////////////////
 
@@ -40,14 +41,22 @@ Route::controller(SesionAutenticadaController::class)->group(function(){
 });
 //Route::view('logincapacitaciones', 'auth.login')->name('login');
 
+
 //BUSQUEDA RUT
-Route::get('capacitaciones/busquedarut', [BusquedaRutController::class, 'index'])->name('busquedaRut');
+Route::controller(BusquedaRutController::class)->group(function(){
+    Route::get('capacitaciones/busquedarut', 'index')->name('busquedaRut'); //busqueda por rut.
+    Route::get('capacitaciones/busquedarut/pdfbusquedarut','pdfbusquedarut')->name('reporteBusquedaRut');
 
-// Route::controller(BusquedaRutController::class)->group(function(){
-//     Route::get('homeCapacitacionesacitaciones/busquedarut', 'show')->name('busquedaRut'); //busqueda por rut.
-// });
+});
 
 
+//REPORTES
+Route::get('capacitaciones/reportes', function () {
+    return view('admin.reportes');
+})->name('reportes');
+
+
+//USUARIOS
 Route::controller(UserController::class)->group(function(){
     Route::get('capacitaciones/nuevousuario','create')->name('formNuevoUsuario');
     Route::post('capacitaciones/nuevousuario/verificaremail', 'verificaremail')->name('verificarEmail');
@@ -58,13 +67,14 @@ Route::controller(UserController::class)->group(function(){
 });
 
 
-
 /*ADMINISTRATIVOS*/
 Route::controller(AdministrativosController::class)->group(function(){
     Route::get('capacitaciones/administrativos','create')->name('formAdministrativos');
     Route::get('capacitaciones/administrativos/listadocapacitacionesadministrativos','show')->name('listadoAdministrativos');
     Route::post('capacitaciones/storeadministrativos','store')->name('storeCapacitacionAd');
     Route::get('capacitaciones/administrativos/listadocapacitacionesadministrativos/perfilcapacitado','perfilcapacitado')->name('perfilCapacitadoAd');
+    Route::get('capacitaciones/reportes/pdfadministrativos', 'pdfadministrativos')->name('reporteAdministrativos');
+    //Route::get('prueba','fecha')->name('fecha');
 });
 
 
@@ -74,6 +84,7 @@ Route::controller(AseadoresController::class)->group(function(){
     Route::get('capacitaciones/aseadores/listadocapacitacionesaseadores','show')->name('listadoAseadores');
     Route::post('capacitaciones/storeaseadores','store')->name('storeCapacitacionA');
     Route::get('capacitaciones/aseadores/listadocapacitacionesaseadores/perfilcapacitado','perfilcapacitado')->name('perfilCapacitadoAs');
+    Route::get('capacitaciones/reportes/pdfaseadores', 'pdfaseadores')->name('reporteAseadores');
 });
 
 
@@ -83,6 +94,7 @@ Route::controller(CajerasController::class)->group(function(){
     Route::get('capacitaciones/cajeras/listadocapacitacionescajeras','show')->name('listadoCajeras');
     Route::post('capacitaciones/storecajeras','store')->name('storeCapacitacionC');
     Route::get('capacitaciones/cajeras/listadocapacitacionescajeras/perfilcapacitado','perfilcapacitado')->name('perfilCapacitadoCa');
+    Route::get('capacitaciones/reportes/pdfcajeras', 'pdfcajeras')->name('reporteCajeras');
 });
 
 
@@ -92,6 +104,7 @@ Route::controller(CondyAuxController::class)->group(function(){
     Route::get('capacitaciones/condyaux/listadocapacitacionescondyaux','show')->name('listadoCondyAux');
     Route::post('capacitaciones/storecondyaux','store')->name('storeCapacitacionCA');
     Route::get('capacitaciones/condyaux/listadocapacitacionescondyaux/perfilcapacitado','perfilcapacitado')->name('perfilCapacitadoCya');
+    Route::get('capacitaciones/reportes/pdfcondyaux', 'pdfcondyaux')->name('reporteCondyAux');
 });
 
 
@@ -101,6 +114,7 @@ Route::controller(GeryJefController::class)->group(function(){
     Route::get('capacitaciones/geryjef/listadocapacitacionesgeryjef','show')->name('listadoGeryJef');
     Route::post('capacitaciones/storegeryjef','store')->name('storeCapacitacionGJ');
     Route::get('capacitaciones/geryjef/listadocapacitacionesgeryjef/perfilcapacitado','perfilcapacitado')->name('perfilCapacitadoGyj');
+    Route::get('capacitaciones/reportes/pdfgeryjef', 'pdfgeryjef')->name('reporteGeryJef');
 });
 
 
@@ -111,4 +125,5 @@ Route::controller(MantenimientoController::class)->group(function(){
     Route::get('capacitaciones/mantenimiento/listadocapacitacionesmantenimiento', 'show')->name('listadoMantenimiento');
     Route::post('capacitaciones/storecapacitacion', 'store')->name('storeCapacitacionM');
     Route::get('capacitaciones/mantenimiento/listadocapacitacionesmantenimiento/perfilcapacitado','perfilcapacitado')->name('perfilCapacitadoMa');
+    Route::get('capacitaciones/reportes/pdfmantenimiento', 'pdfmantenimiento')->name('reporteMantenimiento');
 });

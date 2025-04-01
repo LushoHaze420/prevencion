@@ -24,6 +24,11 @@ class Administrativos extends Model
         'nombre_cap',
         'apellidos_cap',
         'rol_cap',
-        'documentos',
+        'odi',//General
+        'extintores',//General
+        'difusion',//General
+        'primeros_auxilios',
+        'tmertad',
+        'diploma',//General
         ];
 }

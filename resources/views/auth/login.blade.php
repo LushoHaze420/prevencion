@@ -56,7 +56,7 @@
                                 <span id="maximo_caracteres_valUsuario" class="form-text"></span>
                             </div>
 
-                            <div class="input-group form-group">
+                            <div class="input-group form-group"><!--contraseña-->
                                 <div class="input-group-prepend">
                                     <span class="input-group-text"><i class="fas fa-key"></i></span>
                                 </div>

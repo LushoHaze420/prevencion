@@ -17,13 +17,26 @@ class CondyAux extends Model
     public $timestamps=true;
 
     protected $fillable=[
-        // 'rut_prev',
         'nombre_prev',
-        // 'apellidos_prev',
         'rut_cap',
         'nombre_cap',
         'apellidos_cap',
         'rol_cap',
-        'documentos',
+        'odi',//General, presente en section en formulario base
+        'extintores',//General, presente en section
+        'difusion',//General, presente en section
+        'manejo_defensiva',
+        'riesgos_criticos_conduccion_buses',
+        'reinduccion_exceso_velocidad',
+        'campaña_exceso_velocidad',
+        'conduccion_segura_alta_montaña',
+        'control_riesgos_conduccion',
+        'manejo_defensiva_autopistas_carreteras',
+        'control_riesgos_fatiga_somnolencia_conduccion',
+        'reinduccion_manejo_defensiva',
+        'manejo_manual_cargas',
+        'curso_teorico_practico_conduccion_simulador',
+        'promocion_salud',
+        'diploma', //General, presente en section
         ];
 }

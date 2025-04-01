@@ -19,8 +19,13 @@ return new class extends Migration
             $table->string('rut_cap', 9);
             $table->string('nombre_cap', 30);
             $table->string('apellidos_cap', 40);
-            $table->string('rol_cap', 20);
-            $table->string('documentos', 100);
+            $table->string('rol_cap', 30);
+            $table->string('odi', 100)->nullable();
+            $table->string('extintores', 100)->nullable();
+            $table->string('difusion', 100)->nullable();
+            $table->string('primeros_auxilios', 100)->nullable();
+            $table->string('tmertad', 100)->nullable();
+            $table->string('diploma', 100)->nullable();
             $table->timestamps();
         });
     }

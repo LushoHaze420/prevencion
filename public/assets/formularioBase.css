@@ -3,9 +3,13 @@
     margin-top: auto;
     margin-bottom: auto;
     width: 1000px;
-    background-color: rgb(255, 251, 251) !important;
+    background-color: rgba(255, 255, 255, 0.4) !important;
     margin-left: auto;
     margin-right: auto;
+
+    margin: 0 auto;
+    display: flex;
+
 }
 
 .titulos{
@@ -26,12 +30,11 @@
     font-weight: bold;
 }
 
-
-
-
+/*btn volver a capacitaciones*/
 .btnHomeCap{
     color: white;
     background-color: blue;
+    margin-right: 10px;
 }
 
 .btnHomeCap:hover{

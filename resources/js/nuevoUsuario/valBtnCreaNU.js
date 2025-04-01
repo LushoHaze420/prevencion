@@ -41,16 +41,13 @@ function enviarFormulario_nuevoUsuario(evento) {
     if (!camposCompletados || !camposRolSeleccionados) {
         evento.preventDefault();
 
+        // Mostrar un mensaje de error al usuario
         Swal.fire({
             icon: 'error',
             title: 'Error',
             text: 'Por favor complete todos los campos obligatorios antes de enviar el formulario, y seleccione al menos una opción de rol.',
             });
         }
-
-        // Mostrar un mensaje de error al usuario
-        //alert('Por favor, complete todos los campos obligatorios antes de enviar el formulario, y seleccione al menos una opción de rol.');
-
 }
 
 // Agregar un manejador de eventos para enviar formulario

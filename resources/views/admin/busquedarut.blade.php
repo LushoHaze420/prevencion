@@ -61,12 +61,22 @@
             <div class="card-body">
                 <ul style="list-style-type: none; padding-left: 0;">
                     <li>
+                        <span><b>Reporte</b></span>
+                        <div>
+                            {{-- <button class="btn btn-primary" onclick="window.open('', '_blank')">Generar reporte</button> --}}
+                            <p><a href="{{route('reporteBusquedaRut')}}" class="btn btn-primary btnRepBusquedaRut" target="_blank">Generar reporte</a></p>
+
+                        </div>
+                    </li>
+
+                    <li>
                         <span><b>ODI</b></span>
                         <div>
                             <button class="btn btn-primary" onclick="window.open('', '_blank')">Acceder</button>
                             <input class="btn btn-secondary" type="file" id="fileInput"  accept=".pdf" onclick="replaceDocument()" onchange="showSelectedFileName()">
                             <button class="btn btn-success" onclick="saveChanges()">Guardar cambios</button>
-                        </div>                    </li>
+                        </div>
+                    </li>
                     <br>
                     <li>
                         <span><b>Uso y Manejo de Extintores</b></span>
@@ -74,7 +84,8 @@
                             <button class="btn btn-primary" onclick="window.open('', '_blank')">Acceder</button>
                             <input class="btn btn-secondary" type="file" id="fileInput"  accept=".pdf" onclick="replaceDocument()" onchange="showSelectedFileName()">
                             <button class="btn btn-success" onclick="saveChanges()">Guardar cambios</button>
-                        </div>                    </li>
+                        </div>
+                    </li>
                     <br>
                     <li>
                         <span><b>Difusion Plan de Emergencia</b></span>
@@ -82,7 +93,8 @@
                             <button class="btn btn-primary" onclick="window.open('', '_blank')">Acceder</button>
                             <input class="btn btn-secondary" type="file" id="fileInput"  accept=".pdf" onclick="replaceDocument()" onchange="showSelectedFileName()">
                             <button class="btn btn-success" onclick="saveChanges()">Guardar cambios</button>
-                        </div>                    </li>
+                        </div>
+                    </li>
                 </ul>
 
             </div>

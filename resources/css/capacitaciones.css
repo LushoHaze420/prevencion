@@ -1,0 +1,33 @@
+body{
+    background-image: url('/resources/images/busesandimar.jpg');
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+
+.busquedaRut{
+text-align: left; /*revisar*/
+}
+
+.btnBusquedaRut{
+color: white;
+background-color: blue;
+}
+
+.btnBusquedaRut:hover{
+color: black;
+background-color: red;
+}
+
+.solomensaje{
+    width: auto;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+/*Barra de busqueda por rut*/
+.navbar-smaller {
+    margin-top: 60px;
+    max-width: 560px; /* Ajustar valor segun necesidades*/
+    justify-content: flex-end;
+    margin-left: auto;
+}

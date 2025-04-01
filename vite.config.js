@@ -5,8 +5,8 @@ export default defineConfig({
     plugins: [
         laravel({
             input: ['assets/login.css',
-            'assets/capacitaciones.css',
             'assets/formularioBase.css',
+            'assets/reportesBase.css',
             'assets/listadoCapacitaciones.css',
             'assets/nuevoUsuario.css',
             'resources/js/home/valBusquedaRut.js',

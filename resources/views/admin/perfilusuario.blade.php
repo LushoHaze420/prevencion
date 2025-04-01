@@ -40,10 +40,10 @@
                     <tbody>
                         <tr>
                             <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                            <td><input type="text" class="form-control" oninput="validateInput(this)"></td>
+                            <td><input type="text" class="form-control" oninput="validateInput(this)"></td>
+                            <td><input type="text" class="form-control" oninput="validateInput(this)"></td>
+                            <td><input type="text" class="form-control" oninput="validateInput(this)"></td>
                             <td><select class="form-select " name="roleUpdate" aria-label="seleccion de rol">
                                 <option selected>Seleccione Rol</option>
                                 @role('rol_usuario_superadmin')
@@ -54,7 +54,7 @@
                             </select></td>
                             <td></td>
                             <td></td>
-                            <td> <a class="btn btn-danger" href="#">Activo/Inactivo</a> </td>
+                            <td> <a id="toggleButton" class="btn btn-success" onclick="toggleButton()">Activo</a> </td> {{-- Revisar este boton que concuerde con la BD--}}
                             <td> <a class="btn btn-danger" href="#">Guardar</a> </td>
                         </tr>
                     </tbody>
@@ -117,6 +117,34 @@
         }
     });
 </script>
+<script>  //este script no funciona fuera de esta pagina, osea en un archivo js, aun asi esta en@vite como botonEstadoCapacitado.js
+    function toggleButton() {
+        var button = document.getElementById("toggleButton");
+
+        if (button.innerText === "Activo") {
+            button.innerText = "Inactivo";
+            button.classList.remove("btn-success");
+            button.classList.add("btn-warning");
+        } else {
+            button.innerText = "Activo";
+            button.classList.remove("btn-warning");
+            button.classList.add("btn-success");
+        }
+    }
+</script>
+
+<script>
+    function validateInput(input) {
+        var regex = /^[a-zA-Z\s]*$/;
+        var inputValue = input.value;
+
+        if (!regex.test(inputValue)) {
+            input.value = inputValue.replace(/[^a-zA-Z\s]/g, '');
+        }
+    }
+</script>
+
+
 </body>
 </html>
 {{--este enlace fue utilizado como tutorial para implementar datatables con estilos responsivos: https://www.youtube.com/watch?v=xyGriTTRo_o&list=PLZ2ovOgdI-kVmp2KynrUyosIazUhGK-6n --}}

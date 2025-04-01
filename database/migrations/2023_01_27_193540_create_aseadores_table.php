@@ -19,8 +19,14 @@ return new class extends Migration
             $table->string('rut_cap', 9);
             $table->string('nombre_cap', 30);
             $table->string('apellidos_cap', 40);
-            $table->string('rol_cap', 20);
-            $table->string('documentos', 100);
+            $table->string('rol_cap', 30);
+            $table->string('odi', 100)->nullable();//nullable para cuando no se cargue algun documento
+            $table->string('extintores', 100)->nullable();
+            $table->string('difusion', 100)->nullable();
+            $table->string('limpieza_desinfeccion_covid', 100)->nullable();
+            $table->string('uso_sustancias_peligrosas', 100)->nullable();
+            $table->string('uso_correcto_epp', 100)->nullable();
+            $table->string('diploma', 100)->nullable();
             $table->timestamps();
         });
     }
